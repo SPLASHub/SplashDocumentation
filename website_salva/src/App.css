@@ -177,3 +177,64 @@ body{
   margin-left: 20px;
   margin-right: 20px;
 }
+
+@media screen and (max-width: 900px){
+
+  .mainpage {
+    min-height: 850px;
+  }
+
+  .maintext {
+    height: 55%;
+    min-height: 700px;
+  }
+
+  .context{
+    min-height: 600px;
+  }
+  
+  .contextT h3 {
+    font-size: 3rem;
+  }
+
+  .contextT p {
+    font-size: 1.1rem;
+  }
+
+  .more{
+    min-height: 1800px;
+  }
+  
+  .more h3{
+    font-size: 3rem;
+  }
+  
+  .moreinfo{
+    flex-direction: column;
+  }
+  
+  .moreInfoText{
+    height: 45%;
+    width: 80%;
+    border: 3px solid rgb(10, 35, 40);
+    background-color: rgb(200,200,180);
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  
+  .moreInfoText h4{
+    font-size: 2rem;
+    font-weight: 300;
+    color: rgb(10, 35, 40);
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .moreInfoText p{
+    text-align: left;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  
+}
