@@ -27,8 +27,8 @@ function App() {
         <div className="divider" />
         <h3>
           Context
-        </h3>
-        
+
+        </h3>       
 
       </div>
     </section>

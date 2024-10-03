@@ -4,7 +4,7 @@ import "./Navbar.css";
 function Navbar() {
     return (
         <nav className="navbar">
-            <h1>SALVA</h1>
+            <img className="logo" src={process.env.PUBLIC_URL + '/Images/logo.png'} alt="SALVA" />
             <div className="links">
                 <a href="/">a</a>
             </div>
