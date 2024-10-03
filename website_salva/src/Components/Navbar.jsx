@@ -6,7 +6,8 @@ function Navbar() {
         <nav className="navbar">
             <img className="logo" src={process.env.PUBLIC_URL + '/Images/logo.png'} alt="SALVA" />
             <div className="links">
-                <a href="/">a</a>
+                <p onClick={() => window.scrollTo(0, 0)}>HOME</p>
+                <p onClick={() => window.scrollTo(0, 900)}>ABOUT</p>
             </div>
         </nav>
     );
