@@ -1,0 +1,66 @@
+body{
+  font-family: 'Exo 2', sans-serif;
+
+}
+
+.mainpage {
+  margin-top: 40px;
+  height: calc(100vh - 40px);
+  text-align: center;
+  background-image: url('../public/Images/back.jpg');
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 10px solid #333;
+
+}
+
+.mainpage h1 {
+  font-size: 5rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(250, 200, 15);
+  position: relative;
+}
+
+.mainpage h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgb(250, 200, 15);
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.divider{
+  height: 5px;
+  width: 40%;
+  background-color: rgb(210, 40, 20);
+  border-radius: 20px;
+}
+
+.Deti{
+  height: 55px;
+  width: 140px;
+  border-radius: 20px;
+  background-image: url('../public/Images/deti.png');
+  background-size: cover;
+}
+
+.aboutsec{
+  height: calc(100vh - 40px);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: 10px solid #333;
+}
+
+.aboutsec h2 {
+  font-size: 4rem;
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(250, 200, 15);
+  position: relative;
+  margin-bottom: 20px;
+}
