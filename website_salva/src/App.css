@@ -32,6 +32,10 @@ body{
   margin-bottom: 5px;
 }
 
+.mainpage p{
+  color: white;
+}
+
 .divider{
   height: 5px;
   width: 40%;
@@ -63,4 +67,43 @@ body{
   color: rgb(250, 200, 15);
   position: relative;
   margin-bottom: 20px;
+}
+
+.context{
+  width: 100%;
+  height: 50%;
+  display: flex;
+}
+
+.contextT {
+  width: 70%;
+  height: 100%;
+  text-align: left;
+  margin-left: 30px;
+}
+
+.contextT h3 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: rgb(100, 150, 160);
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.contextT p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.contextI {
+  height: 80%;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-top: 45px;
+}
+
+.contextI img{
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
 }
