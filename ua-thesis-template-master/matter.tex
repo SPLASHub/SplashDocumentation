@@ -1,3 +1,14 @@
+% Instruções: [ Tudo está configurado! ]
+% Apenas necessitamos de mexer neste documento para fazer "enable" de novos capítulos e referencias usadas. Isto significa que: 
+
+% ---> Apenas necessitamos de criar novos documentos dentro da pasta "chapters" (Ex.: chapter3.tex) e adiciona-los a este documento (que é o nosso "main"), na secção "START OF THESIS TEXT".
+% ---> Apenas necessitamos de fazer adicionar as referencias usadas na secção "PRINT ALL USED REFERENCES"
+% ---> DEVEMOS: adicionar novas coisas ao glossário (glossary.tex).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%% PREAMBLE SECTION %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%!TEX encoding = UTF-8 Unicode
 
 % Several lines in file have comments suggesting common packages for the
@@ -23,7 +34,7 @@
 
 % Enable for for Overleaf support
 \usepackage{ifthen}
-\def\useoverleaf{0}  % change to non-zero (for instance, 1) to enable it
+\def\useoverleaf{1}  % change to non-zero (for instance, 1) to enable it
 
 \makeatletter
 \newcommand{\makecoverfile}[0]{%
@@ -135,7 +146,7 @@
 %\usepackage{tikz}
 
 % UML support
-%\usepackage{pgf-umlsd}
+\usepackage{pgf-umlsd}
 
 % Trees, Arrows, Mindmaps and other popular objects
 %\usetikzlibrary{arrows,shadows,trees,shapes,decorations,automata,backgrounds,petri,mindmap} % for pgf-umlsd
@@ -228,10 +239,8 @@
   \mainmatter
   \setcounter{page}{\temppagenumber}%
 }
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Document begins here
+%%%%%%%%%%%%%% DOCUMENT BEGINS HERE %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
@@ -351,7 +360,7 @@
 {\small\include{glossary}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Main document starts here
+%%%%%%%%%%%%%%%%%%%% MAIN DOCUMENT %%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \mainmatter
@@ -360,7 +369,7 @@
 \OnehalfSpacing
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Start of Thesis text 
+%%%%%%%%%%%%%%%% START OF THESIS TEXT %%%%%%%%%%%%%%%%% 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Uncomment to add further chapters
@@ -370,13 +379,13 @@
 %\include{chapter4}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% End of Thesis text 
+%%%%%%%%%%%%%%%%% END OF THESIS TEXT %%%%%%%%%%%%%%%%%%  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \backmatter
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Print all used references
+%%%%%%%%%%%%%% PRINT ALL USED REFERENCES %%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begingroup
@@ -393,7 +402,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Load appendix
+%%%%%%%%%%%%%%%%%%%% LOAD APPENDIX %%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \mainmatterWithoutReset
