@@ -1,2 +1,3 @@
 # PECI-24-25
-SALVA – Smart Aid for Lifeguards and Vigilance Assistance
+SPLASH - Strategic Prevention​ and Lifeguard Alert ​Safety Hub
+Link site: https://josmsilva.github.io/SPLASH/
