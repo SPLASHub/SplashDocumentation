@@ -1,4 +1,4 @@
-% Instruções: [ Tudo está configurado! ]
+% Instruções:  [ Tudo está configurado! ]
 % Apenas necessitamos de mexer neste documento para fazer "enable" de novos capítulos e referencias usadas. Isto significa que: 
 
 % ---> Apenas necessitamos de criar novos documentos dentro da pasta "chapters" (Ex.: chapter3.tex) e adiciona-los a este documento (que é o nosso "main"), na secção "START OF THESIS TEXT".
@@ -21,6 +21,7 @@
 
 \listfiles
 \fixpdflayout
+
 
 \usepackage[utf8]{inputenc}
 
@@ -231,7 +232,7 @@
 \checkandfixthelayout
 
 % Or select your custom spacing to make any ajustment
-%\addtolength{\parskip}{0.5\baselineskip}
+%\addtolength{\paWrskip}{0.5\baselineskip}
 \linespread{1.5}
 
 \newcommand\mainmatterWithoutReset
@@ -252,7 +253,7 @@
 \setcounter{page}{0}\includepdf[pages=-]{cover.pdf}
 
 % Uncomment to enable English
-%\selectlanguage{english}
+\selectlanguage{english}
 
 
 % Front matter
@@ -374,10 +375,11 @@
 
 % Uncomment to add further chapters
 \include{chapters/chapter1}
-%\include{chapter2}
-%\include{chapter3}
-%\include{chapter4}
-
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+\include{chapters/chapter4}
+\include{chapters/chapter5}
+\include{chapters/chapter6} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%% END OF THESIS TEXT %%%%%%%%%%%%%%%%%%  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -405,9 +407,9 @@
 %%%%%%%%%%%%%%%%%%%% LOAD APPENDIX %%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\mainmatterWithoutReset
-\appendix
+%\mainmatterWithoutReset
+%\appendix
 
-\include{chapters/appendix-more}
+%\include{chapters/appendix-more}
 
 \end{document}

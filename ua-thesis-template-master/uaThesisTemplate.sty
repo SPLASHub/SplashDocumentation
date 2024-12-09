@@ -1,17 +1,6 @@
-%TEX encoding = UTF-8 Unicode
-%
-% LaTeX style file for thesis made at the University of Aveiro
-%
-% (c) 1999, 2007, 2009 Tomás Oliveira e Silva
-%
-% Modified by João Paulo Barraca to better comply with UA guidelines.
-%
-% Some tweeks by Pedro Miguel Oliveira Estima to help new users
-
 \ProvidesPackage{uaThesisTemplate}[2012/10/26 v0.1 UA thesis template]
 \usepackage{graphicx}
 \usepackage{color}
-%\usepackage{a4wide}
 \usepackage{etoolbox}
 
 \usepackage{helvet}
@@ -26,9 +15,7 @@
 \def\ciAbstractText{}
 
 %User Hooks
-\newcommand{\DocumentTypeThesis}{\def\ciDocumentTypeThesis{}}
-\newcommand{\DocumentTypeThesisProposal}{\def\ciDocumentTypeThesisProposal{}}
-\newcommand{\DocumentTypeDissertation}{\def\ciDocumentTypeDissertation{}}
+\newcommand{\DocumentTypeRelatorio}{\def\ciDocumentTypeRelatorio{}}
 \newcommand{\ThesisYear}[1]{\def\ciThesisYear{#1}}
 \newcommand{\TitleEN}[1]{\def\ciTitleEN{#1} }
 \newcommand{\TitlePT}[1]{\def\ciTitlePT{#1} }
@@ -77,67 +64,12 @@
 \newif\ifua@coverdepname@\ua@coverdepname@true
 \DeclareOption{coverdepname}{\ua@coverdepname@false}
 
-%
+
 % color of the cover page top bar
-% (pantone approximations according to http://goffgrafix.com/pantone-rgb-100.php)
-%
-\DeclareOption{usecolor}{} % no longer used
-
-\def\ua@arts       {% approximation of the color pantone  264
-                    \def\ua@red{0.776}\def\ua@green{0.667}\def\ua@blue{0.859}}
-
-\def\ua@sciences   {% approximation of the color pantone 3105
-                    \def\ua@red{0.498}\def\ua@green{0.839}\def\ua@blue{0.859}}
-
-\def\ua@education  {% approximation of the color pantone 1505
-                    \def\ua@red{0.957}\def\ua@green{0.486}\def\ua@blue{0.00}}
-
-\def\ua@economy    {% approximation of the color pantone 1787 (the middle bar is white!)
-                    \def\ua@red{0.957}\def\ua@green{0.247}\def\ua@blue{0.310}}
-
-\def\ua@engineering{% approximation of the color pantone  484
-                    \def\ua@red{0.608}\def\ua@green{0.188}\def\ua@blue{0.110}}
-
-\def\ua@humanities {% approximation of the color pantone  301
-                    \def\ua@red{0}\def\ua@green{0.357}\def\ua@blue{0.6}}
-
-\def\ua@health     {% approximation of the color pantone  115
-                    \def\ua@red{0.976}\def\ua@green{0.878}\def\ua@blue{0.298}}
-
+\def\ua@engineering{\def\ua@red{0.608}\def\ua@green{0.188}\def\ua@blue{0.110}}
 \def\ua@white{1}
 
-
-\DeclareOption{arts}{\ua@arts
-  \let\ua@redT=\ua@red\let\ua@greenT=\ua@green\let\ua@blueT=\ua@blue
-  \let\ua@redM=\ua@red\let\ua@greenM=\ua@green\let\ua@blueM=\ua@blue
-  \let\ua@redB=\ua@red\let\ua@greenB=\ua@green\let\ua@blueB=\ua@blue
-}
-\DeclareOption{sciences}{\ua@sciences
-  \let\ua@redT=\ua@red\let\ua@greenT=\ua@green\let\ua@blueT=\ua@blue
-  \let\ua@redM=\ua@red\let\ua@greenM=\ua@green\let\ua@blueM=\ua@blue
-  \let\ua@redB=\ua@red\let\ua@greenB=\ua@green\let\ua@blueB=\ua@blue
-}
-\DeclareOption{education}{\ua@education
-  \let\ua@redT=\ua@red\let\ua@greenT=\ua@green\let\ua@blueT=\ua@blue
-  \let\ua@redM=\ua@red\let\ua@greenM=\ua@green\let\ua@blueM=\ua@blue
-  \let\ua@redB=\ua@red\let\ua@greenB=\ua@green\let\ua@blueB=\ua@blue
-}
-\DeclareOption{economy}{\ua@economy
-  \let\ua@redT=\ua@red\let\ua@greenT=\ua@green\let\ua@blueT=\ua@blue% the middle bar is white
-  \let\ua@redM=\ua@white\let\ua@greenM=\ua@white\let\ua@blueM=\ua@white
-  \let\ua@redB=\ua@red\let\ua@greenB=\ua@green\let\ua@blueB=\ua@blue
-}
 \DeclareOption{engineering}{\ua@engineering
-  \let\ua@redT=\ua@red\let\ua@greenT=\ua@green\let\ua@blueT=\ua@blue
-  \let\ua@redM=\ua@red\let\ua@greenM=\ua@green\let\ua@blueM=\ua@blue
-  \let\ua@redB=\ua@red\let\ua@greenB=\ua@green\let\ua@blueB=\ua@blue
-}
-\DeclareOption{humanities}{\ua@humanities
-  \let\ua@redT=\ua@red\let\ua@greenT=\ua@green\let\ua@blueT=\ua@blue
-  \let\ua@redM=\ua@red\let\ua@greenM=\ua@green\let\ua@blueM=\ua@blue
-  \let\ua@redB=\ua@red\let\ua@greenB=\ua@green\let\ua@blueB=\ua@blue
-}
-\DeclareOption{health}{\ua@health
   \let\ua@redT=\ua@red\let\ua@greenT=\ua@green\let\ua@blueT=\ua@blue
   \let\ua@redM=\ua@red\let\ua@greenM=\ua@green\let\ua@blueM=\ua@blue
   \let\ua@redB=\ua@red\let\ua@greenB=\ua@green\let\ua@blueB=\ua@blue
@@ -146,99 +78,10 @@
 %
 % Department names
 %
-\DeclareOption{dao}{%
-  \def\ua@textA{Departamento de Ambiente}%
-  \def\ua@textB{e Ordenamento}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
-\DeclareOption{dbio}{%
-  \def\ua@textA{}%
-  \def\ua@textB{Departamento de Biologia}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
-\DeclareOption{dcspt}{%
-  \def\ua@textA{Departamento de Ci\^{e}ncias Sociais,}%
-  \def\ua@textB{Pol\'{\i}ticas e do Territ\'{o}rio}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
-\DeclareOption{deca}{%
-  \def\ua@textA{}%
-  \def\ua@textB{Departamento de Comunica\c{c}\~{a}o e Arte}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
-\DeclareOption{degeit}{%
-  \def\ua@textA{Departamento de Economia, Gest\~{a}o,}%
-  \def\ua@textB{Engenharia Industrial e Turismo}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
-\DeclareOption{de}{%
-  \def\ua@textA{}%
-  \def\ua@textB{Departamento de Educa\c{c}\~{a}o e Psicologia}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
+
 \DeclareOption{deti}{%
   \def\ua@textA{Departamento de Eletr\'{o}nica,}%
   \def\ua@textB{Telecomunica\c{c}\~{o}es e Inform\'{a}tica}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
-\DeclareOption{demac}{%
-  \def\ua@textA{Departamento de Engenharia}%
-  \def\ua@textB{de Materiais e Cer\^{a}mica}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
-\DeclareOption{decivil}{%
-  \def\ua@textA{}%
-  \def\ua@textB{Departamento de Engenharia Civil}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
-\DeclareOption{dem}{%
-  \def\ua@textA{}%
-  \def\ua@textB{Departamento de Engenharia Mec\^{a}nica}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
-\DeclareOption{dfis}{%
-  \def\ua@textA{}%
-  \def\ua@textB{Departamento de F\'{\i}sica}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
-\DeclareOption{dlc}{%
-  \def\ua@textA{}%
-  \def\ua@textB{Departamento de L\'{\i}nguas e Culturas}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
-\DeclareOption{dmat}{%
-  \def\ua@textA{}%
-  \def\ua@textB{Departamento de Matem\'atica}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
-\DeclareOption{dq}{%
-  \def\ua@textA{}%
-  \def\ua@textB{Departamento de Qu\'{\i}mica}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
-\DeclareOption{dcm}{%
-  \def\ua@textA{}%
-  \def\ua@textB{Departamento de Ci\^{e}ncias M\'{e}dicas}%
-  \def\ua@textC{}%
-  \def\ua@textD{}%
-}
-\DeclareOption{dgeo}{%
-  \def\ua@textA{}%
-  \def\ua@textB{Departamento de Geoci\^{e}ncias}%
   \def\ua@textC{}%
   \def\ua@textD{}%
 }
@@ -323,13 +166,8 @@
     \fi%
     \ifua@final@
     \else
-      \ifdefined \ciDocumentTypeThesisProposal%
-        \smash{\rlap{\kern 10mm\lower 110mm\hbox{\Huge\textsf{\textbf{PROPOSTA}}}}}%
-        \smash{\rlap{\kern 20mm\lower 122mm\hbox{\Huge\textsf{\textbf{DE TESE}}}}}%
-      \else
-        \smash{\rlap{\kern 10mm\lower 110mm\hbox{\Huge\textsf{\textbf{DOCUMENTO}}}}}%
-        \smash{\rlap{\kern 20mm\lower 122mm\hbox{\Huge\textsf{\textbf{PROVIS\'ORIO}}}}}%
-      \fi
+      \ifdefined \ciDocumentTypeRelatorio%
+        \smash{\rlap{\kern 10mm\lower 110mm\hbox{\Huge\textsf{\textbf{SPLASH}}}}}%
     \fi
   \par\vspace*{40mm}}
 
@@ -533,34 +371,18 @@
   \vspace*{25mm}
   \TEXT{}{%
 \noindent%
-\ifdefined \ciDocumentTypeThesisProposal%
-Proposta de Tese%
-\else
- \ifdefined \ciDocumentTypeThesis%
-Tese%
- \else
-    \ifdefined \ciDocumentTypeDissertation%
-Disserta\c c\~ao%
-    \fi %
-  \fi%
+\ifdefined \ciDocumentTypeRelatorio%
+Relat\'orio de projeto
 \fi%
-~apresentada \`a Universidade de Aveiro para cumprimento dos requisitos necess\'arios \`a
-\ifdefined \ciDocumentTypeThesisProposal%
-conclusão da unidade curricular Proposta de Tese, condi\c c\~ao necess\'aria para
+apresentada no \^ambito da unidade curricular de Projeto em Engenharia de Computadores e Inform\'atica da Universidade de Aveiro,
+\ifdefined \ciDocumentTypeRelatorio%
+condi\c c\~ao necess\'aria para a
 \fi%
-obten\c c\~ao do grau de {\ciDegreeTitle}
-\ifdefined \ciMAPProgram%
-no âmbito do Programa de Doutoramento
-\fi%
-em {\ciDegreeName}
-\ifdefined \ciMAPProgram%
- das Universidades do Minho, Aveiro e Porto (MAP-\ciMAPProgram)
-\fi%
-, realizada sob a orienta\c c\~ao cient\'ifica 
+obten\c c\~ao do grau de {\ciDegreeTitle} em {\ciDegreeName}, realizada sob a orienta\c c\~ao cient\'ifica 
 \ifdefined \ciSupervisoraName%
-da Doutora {\ciSupervisoraName}, Professora {\ciSupervisoraTitle}
+da Professora {\ciSupervisoraName}, Professora {\ciSupervisoraTitle}
 \else
-do Doutor {\ciSupervisorName}, Professor {\ciSupervisorTitle}
+do Professor {\ciSupervisorName}, Professor {\ciSupervisorTitle}
 \fi%
 do {\ua@textA} {\ua@textB} da Universidade de Aveiro\dolistloop{\ciSupervisorMember}.}
     \vspace{75mm}
@@ -571,41 +393,6 @@ do {\ua@textA} {\ua@textB} da Universidade de Aveiro\dolistloop{\ciSupervisorMem
 {\ifdefined \ciGrantSecond\noindent\ciGrantSecond\fi}
 \fi
 \EndTitlePage
-
-%
-% Dedicatory
-%
-\ifdefined \ciDedication
-\TitlePage
-  \vspace*{95mm}
-  \TEXT{}
-       {\ciDedication}
-\EndTitlePage
-\fi
-
-%
-%
-% Juri Page
-%
-%
-\TitlePage
-  \vspace*{95mm}
-  \SECTION{o j\'uri~/~the jury}
-       {}
-    \dolistloop{\ciJuriMember}
-\EndTitlePage
-
-%
-% Acknowledgement page
-%
-%
-\ifdefined \ciAcknowledgements
-\TitlePage
-  \vspace*{95mm}
-  \SECTION{\textbf{agradecimentos~/\newline acknowledgements}}
-       {\ciAcknowledgements}
-\EndTitlePage
-\fi
 
 
 %

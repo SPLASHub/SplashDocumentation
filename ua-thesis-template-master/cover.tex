@@ -1,52 +1,11 @@
 %!TEX encoding = UTF-8 Unicode
 
-%% Thesis cover pages
-%%
-%% Based on the example.tex file provided by Tomás Oliveira e Silva
-%%
-%% Modified by João Paulo Barraca <jpbarraca@ua.pt>
-%% Modified by Filipe Manco <filipe.manco@ua.pt>
 
 % Remove 'coverdepname' parameter to remove department name from cover pages
 % Add 'final' parameter to remove "DOCUMENTO PROVISÓRIO" from cover page
 \documentclass[11pt,a4paper]{report}
 
-%%% This file is a template for the cover of your
-%%%  thesis.
-%%% Lines like this one, starting with %%% , are
-%%%  instructions. Search them to know where and
-%%%  how to edit this file. After editing the
-%%%  document you can delete them.
-%%% Items marked with OPTIONAL can be removed.
-%%% Most of the lines you will have to change
-%%%  already have examples to help you understand.
-%%% The complete list of options and commands can
-%%%  be found in uaThesisTemplate.sty
 
-
-%%% Select your area of study and department from
-%%%  the following lists and replace them in the
-%%%  \usepackage declaration ([area,department]).
-%%%
-%%% | area        |   | department |
-%%% ---------------   --------------
-%%% | arts        |   | dao        |
-%%% | sciences    |   | dbio       |
-%%% | education   |   | dcspt      |
-%%% | economy     |   | deca       |
-%%% | engineering |   | degeit     |
-%%% | humanities  |   | de         |
-%%% | health      |   | deti       |
-%%% |             |   | demac      |
-%%% |             |   | decivil    |
-%%% |             |   | dem        |
-%%% |             |   | dfis        |
-%%% |             |   | dlc        |
-%%% |             |   | dmat       |
-%%% |             |   | dq         |
-%%% |             |   | dcm        |
-%%% |             |   | dgeo        |
-%%% ---------------   --------------
 %% Import the UA thesis template
 \usepackage[engineering,deti]{uaThesisTemplate}
 
@@ -63,11 +22,6 @@
 
 \usepackage{xspace}% used by \sigla
 
-%%% This package is only used to create a dummy
-%%%  text for the abstract. You can remove the
-%%%  following line in the final document.
-%\usepackage{blindtext}
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%       DEFINE THESIS COVER FIELDS
@@ -80,9 +34,8 @@
 
 
 %%% Uncomment one of the following options:
-%\DocumentTypeThesis
-\DocumentTypeThesisProposal
-%\DocumentTypeDissertation
+\DocumentTypeRelatorio
+
 
 %%% Uncomment if you are a student of a MAP Doctoral program 
 %%% http://www.map.edu.pt/
@@ -96,18 +49,39 @@
 
 %%% Edit author's name
 %% Author's full name
-\Author{FIRST NAME\\LAST NAME}
+\Author{[Grupo Nº14] \\
+        \vspace{1em}
+        João Pedro \\ 
+        Nunes Vieira \\
+        \vspace{0.5em}
+        António Marques \\ 
+        da Silva Pedrosa \\
+        Moreira \\
+        \vspace{0.5em}
+        David Gabriel \\ 
+        Vieira Ribeiro \\
+        \vspace{0.5em}
+        José Miguel \\ 
+        Guardado Silva \\
+        \vspace{0.5em}
+        Marta Cristina \\ 
+        Ferreira Coutinho \\ 
+        de Almeida \\
+        \vspace{0.5em}
+        Luís Manuel \\
+        Trindade Diogo}
 
 %%% Edit thesis title in Portuguese
 %% Thesis Mandatory Title in Portuguese
-\TitlePT{TÍTULO DA TESE (MÁXIMO 130 CARACTERES)}
+\TitlePT{Centro Estratégico de Prevenção e Alerta de Segurança para Nadadores-Salvadores}
 
 %%% OPTIONAL: you can write your thesis title in
 %%%  other languages. You can repeat the following
 %%%  line as many times as you want, or remove it
 %%%  if you only want the portuguese title.
 %% Optional Titles in additional languages.
-\TitleEN{THESIS TITLE (MAX 130 CHARACTERS)}
+\TitleEN{Strategic Prevention and Lifeguard Alert Safety Hub}
+
 
 %%% Edit your supervisor's information.
 %%%
@@ -130,7 +104,7 @@
 %%% | auxiliar convidado        |
 %%% -----------------------------
 %% Supervisor information
-\Supervisor{(nome do orientador)}{associado}
+\Supervisor{Samuel de Sousa Silva}{auxiliar}
 
 %%% OPTIONAL: you can add a second supervisor.
 %%%
@@ -148,19 +122,14 @@
 %%% department: Can be a department, faculty or
 %%%             other; Choose the preposition
 %%%             accordingly.
-%%% school    : University/Scholl name; Choose the
+%%% school    : University/School name; Choose the
 %%%             preposition accordingly.
 %%% last      : Write {e } (Portuguese) or {and } (English)
 %%%             for the last enumerated Supervisor; Or
 %%%             nothing {} for all other supervisors 
-%% Optional SecondSuperviser information
-\SupervisorMember{(co-orientador)}{auxiliar convidado}{do Departamento de Matemática}{da Universidade de Aveiro}{}
-
-%%% Repeat the above declaration for additional
-%%%  Supervisor members as many times as necessary.
-%% Additional Supervisor members
-\SupervisoraMember{(co-orientadora)}{associada c/ agregação}{do Departamento de Biologia}{da Universidade de Aveiro}{}
-\SupervisorMember{(co-orientador)}{auxiliar convidado}{do Departamento de Física}{da Universidade de Aveiro}{e }
+%% Optional SecondSupervisor information
+\SupervisorMember{Bernardo José Santos Marques}{auxiliar}{do Departamento de Eletrónica, Telecomunicações e Informática}{da Universidade de Aveiro}{e }
+%\SupervisorMember{Daniel Martins Ferreira}{investigador associado}{do Departamento de Eletrónica, Telecomunicações e Informática}{da Universidade de Aveiro}{e }
 
 %%% Edit your degree information.
 %%%
@@ -169,41 +138,60 @@
 %%% title: Degree title (Mestre or Doutor)
 %%% name : Degree name
 %% Degree title and name
-\Degree{Mestre}{Engenharia de Computadores e Telemática}
+\Degree{Licenciado}{Engenharia de Computadores e Informática}
 
 %%% OPTIONAL: edit grant support texts where
 %%%  appropriate. Maximum two.
 %%%
 %%% \GrantText{grant1}{grant2}
 %% Optional Grant support texts
-\GrantText{Texto Apoio financeiro do POCTI no âmbito do III Quadro Comunitário de Apoio.}
-          {Texto Apoio financeiro da FCT e do FSE no âmbito do III Quadro Comunitário de Apoio.}
+%\GrantText{Texto Apoio financeiro do POCTI no âmbito do III Quadro Comunitário de Apoio.\\
+%          \newline
+%          (if applicable- Portuguese mandatory)}
+%          {Texto Apoio financeiro da FCT e do FSE no âmbito do III Quadro Comunitário de Apoio.\\
+%          \newline
+%          (if applicable- Portuguese mandatory)}
 
-%%% OPTIONAL: Add a dedication text.
-%% Optional Dedication text
-\Dedication{Dedico este trabalho à minha esposa e filho pelo incansável apoio.}
+%%% Edit the Jury President information.
+%% First Member will be the President of the Jury
+\JuriMember{Prof. Doutor Rui Luís Andrade Aguiar}{professor catedrático da Universidade de Aveiro}
+
+%%% Repeat the above declaration for additional
+%%%  members of the jury as many times as necessary.
+%% Additional members of the Jury
+\JuriMember{Prof. Doutor José Manuel Matos Moreira}{professor associado da Universidade de Aveiro}
 
 %%% OPTIONAL: Add an acknowledgement text
 %% Optional Acknowledgement text
-\Acknowledgements{Agradeço toda a ajuda a todos os meus colegas e companheiros.}
+\Acknowledgements{Gostaríamos de expressar o nosso sincero agradecimento aos nossos professores orientadores, cuja orientação e apoio foram fundamentais para a realização deste projeto.
 
-%%% OPTIONAL: Acknowledge the use of AI Tools
-%\AIUse{I acknowledge the use of [insert AI system(s) and link] to [specific use of generative artificial intelligence or other tasks].
-%I acknowledge the use of [software, codes or platforms] to [specific use software, codes or platforms or to other tasks].
-%}
-%Reconheço o uso de [inserir sistema(s) de IA e respetiva hiperligação] para [indicar utilização específica de IA ou outras tarefas]. Reconheço a utilização de [indicar software, código ou plataforma] para [indicar utilização específica de software, código ou platafoma ou para outras tarefas].
-%Exemplo 1: Reconheço a utilização do ChatGPT 3.5 (Open AI, https://chat.openai.com) para resumir as notas iniciais e para rever o rascunho final, a utilização do Office365 (Microsoft, https://www.office.com) para a escrita do texto.
-%Exemplo 2: Não foram utilizados no presente trabalho quaisquer conteúdos gerados por tecnologias de IA.
-
-
-
+\\
+Agradecemos ao Professor Doutor Samuel de Sousa Silva por ter aceitado o nosso projeto auto-proposto e pelo seu envolvimento contínuo. A sua orientação valiosa, conhecimento e experiência foram uma fonte de inspiração constante.
+\\
+Agradecemos igualmente ao Professor Doutor Bernardo José Santos Marques e ao Professor Daniel Martins Ferreira pela sua disponibilidade, orientação e pelos conselhos úteis que contribuíram para o desenvolvimento deste trabalho.
+\\
+A todos, muito obrigado por acreditarem em nós e por nos guiarem nesta jornada. A vossa contribuição foi inestimável para o resultado final deste projeto.
+\\
+\vspace{1em}
+We would like to express our sincere gratitude to our supervising professors, whose guidance and support were fundamental for the realization of this project.
+\\
+We thank Professor Doctor Samuel de Sousa Silva for accepting our self-proposed project and for his continuous involvement. His valuable guidance, knowledge, and experience were a constant source of inspiration.
+\\
+We also thank Professor Doctor Bernardo José Santos Marques and Professor Daniel Martins Ferreira for their availability, guidance, and useful advice that contributed to the development of this work.
+\\
+To all, thank you very much for believing in us and guiding us on this journey. Your contribution was invaluable to the final outcome of this project.
+}
 %%% Edit the keywords and abstract in Portuguese
 %%% Don't forget to remove the \blindtext[3]
 %%%  declaration.
 %%% Don't remove the \selectlanguage statement or you will end with incorrect hyphenation
 %% Mandatory Keywords and Abstract in Portuguese
-\Abstract{palavras-chave}{texto livro, arquitetura, história, construção, materiais de construção, saber tradicional.}
-         {resumo}{\selectlanguage{portuguese}Um resumo é um pequeno apanhado de um trabalho mais longo (como uma tese, dissertação ou trabalho de pesquisa). O resumo relata de forma concisa os objetivos e resultados da sua pesquisa, para que os leitores saibam exatamente o que se aborda no seu documento.\\Embora a estrutura possa variar um pouco dependendo da sua área de estudo, o seu resumo deve descrever o propósito do seu trabalho, os métodos que você usou e as conclusões a que chegou.\\Uma maneira comum de estruturar um resumo é usar a estrutura IMRaD. Isso significa: \begin{itemize} \item Introdução \item Métodos \item Resultados \item Discussão \end{itemize} Veja mais pormenores aqui:\\\texttt{https://www.scribbr.com/dissertation/abstract/}}
+\Abstract{palavras-chave}{Segurança, Praia, Nadador-Salvador, Prevenção, Tecnologia.}
+         {resumo}{\selectlanguage{portuguese}O projeto Strategic Prevention and Lifeguard Alert Safety Hub (SPLASH) é uma prova de conceito destinada a melhorar a segurança e a gestão das praias portuguesas, que desempenham um papel central no turismo e na economia do país.
+         \\
+         Com milhares de turistas visitando anualmente, o foco principal da iniciativa SPLASH é garantir que os nadadores-salvadores possam desempenhar suas funções de forma eficaz. O aumento do volume de turistas apresenta desafios significativos, tornando a sua segurança e vigilância uma prioridade máxima. Assim, é crucial não apenas para manter a reputação do país, mas, mais importante ainda, para garantir o bem-estar dos banhistas e a eficácia dos nadadores-salvadores enquanto cumprem suas funções críticas. O projeto é desenhado para abordar estes desafios complexos, melhorando as capacidades, comunicação, estratégias e gestão dos nadadores-salvadores.
+         \\
+         O SPLASH representa uma contribuição significativa para a modernização da gestão costeira, promovendo a proteção de vidas humanas através da prevenção e reforçando o status de Portugal como um padrão internacional de segurança nas praias.}
 
 %%% OPTIONAL: you can write the keywords and
 %%%  abstract in other languages. You can repeat
@@ -212,22 +200,12 @@
 %%% Don't remove the \selectlanguage statement or you will end with incorrect hyphenation.
 %%% You can modify the language to any other supported by Latex
 %% Optional Keywords and Abstract in additional languages.
-\Abstract{keywords}{textbook, architecture, history, construction, construction materials, traditional knowledge.}
-         {abstract}{\selectlanguage{english}An abstract is a short summary of a longer work (such as a thesis, dissertation or research paper).\\The abstract concisely reports the aims and outcomes of your research, so that readers know exactly what your paper is about.\\Although the structure may vary slightly depending on your discipline, your abstract should describe the purpose of your work, the methods you’ve used, and the conclusions you’ve drawn.\\One common way to structure your abstract is to use the IMRaD structure. This stands for: \begin{itemize} \item Introduction \item Methods \item Results \item Discussion \end{itemize} Check for more details here:\\\texttt{https://www.scribbr.com/dissertation/abstract/}}
-
-%%% Edit the Jury President information.
-%% First Member will be the President of the Jury
-\JuriMember{Prof. Doutor João Antunes da Silva}{professor associado da Universidade de Aveiro}
-
-%%% Repeat the above declaration for additional
-%%%  members of the jury as many times as necessary.
-%% Additional members of the Jury
-\JuriMember{Prof. Doutor João Antunes da Silva}{professor associado da Universidade de Aveiro}
-\JuriMember{Prof. Doutor João Antunes da Silva}{professor associado da Universidade de Aveiro}
-\JuriMember{Prof. Doutor João Antunes da Silva}{professor associado da Universidade de Aveiro}
-\JuriMember{Prof. Doutor João Antunes da Silva}{professor associado da Universidade de Aveiro}
-\JuriMember{Prof. Doutor João Antunes da Silva}{professor associado da Universidade de Aveiro}
-
+\Abstract{keywords}{Safety, Beach, Lifeguards, Prevention, Technology.}
+         {abstract}{\selectlanguage{english}The Strategic Prevention and Lifeguard Alert Safety Hub (SPLASH) project is a proof of concept designed to enhance the safety and management of Portuguese beaches, which play a central role in the country’s tourism and economy. 
+         \\
+         With thousands of tourists visiting each year, the primary focus of the SPLASH initiative is to ensure lifeguards can perform their duties effectively. The increased volume of tourists presents significant challenges for lifeguards, making their safety and vigilance a top priority. This is crucial not only for maintaining the country's reputation but, more importantly, for ensuring the well-being of beachgoers and the effectiveness of the lifeguards as they carry out their critical duties. The project is designed to address these complex and growing challenges by enhancing lifeguard capabilities, improving their communication, and optimizing their management strategies. 
+         \\
+         SPLASH represents a significant contribution to the modernization of coastal management, promoting the protection of human lives through prevention while also strengthening Portugal’s status as an international benchmark for beach safety.}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%       DEFINE THESIS COVER FIELDS
@@ -242,7 +220,7 @@
 %%%  declaration). If you're writing your thesis
 %%%  in english uncomment the following line.
 %%% Set the proper language or you will end with incorrect hyphenation!
-%\selectlanguage{english}
+\selectlanguage{english}
 
 
 \MakeCover
