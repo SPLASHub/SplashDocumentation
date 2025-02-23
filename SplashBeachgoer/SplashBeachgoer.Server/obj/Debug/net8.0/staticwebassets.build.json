@@ -1,0 +1,24 @@
+{
+  "Version": 1,
+  "Hash": "QKzYzjMNBMp99tj5RRAhf8GULXpguz0FM+UrGFsV3EY=",
+  "Source": "SplashBeachgoer.Server",
+  "BasePath": "_content/SplashBeachgoer.Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [
+    {
+      "Identity": "C:\\Users\\José Silva\\Documents\\PECI\\SplashBeachgoer\\splashbeachgoer.client\\splashbeachgoer.client.esproj",
+      "Version": 2,
+      "Source": "splashbeachgoer.client",
+      "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+    }
+  ],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

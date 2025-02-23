@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SplashBeachgoer.Server", "SplashBeachgoer.Server\SplashBeachgoer.Server.csproj", "{492559E5-36C5-4287-977D-DF1388409EF3}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "splashbeachgoer.client", "splashbeachgoer.client\splashbeachgoer.client.esproj", "{91EC67D4-1B8D-4F67-8BC7-D612AC122813}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{492559E5-36C5-4287-977D-DF1388409EF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{492559E5-36C5-4287-977D-DF1388409EF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{492559E5-36C5-4287-977D-DF1388409EF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{492559E5-36C5-4287-977D-DF1388409EF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91EC67D4-1B8D-4F67-8BC7-D612AC122813}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91EC67D4-1B8D-4F67-8BC7-D612AC122813}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91EC67D4-1B8D-4F67-8BC7-D612AC122813}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{91EC67D4-1B8D-4F67-8BC7-D612AC122813}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91EC67D4-1B8D-4F67-8BC7-D612AC122813}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91EC67D4-1B8D-4F67-8BC7-D612AC122813}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B2F619C2-B4C7-4DCA-9832-CCE7570E1B79}
+	EndGlobalSection
+EndGlobal

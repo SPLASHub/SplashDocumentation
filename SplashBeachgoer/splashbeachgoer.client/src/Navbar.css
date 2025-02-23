@@ -1,0 +1,56 @@
+
+/***************************** Main Container *****************************/
+.navbar {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #CFB178;
+    padding-left: 1rem;
+    padding-right: 1.1rem;
+}
+
+/***************************** Logo *****************************/
+.NavLogo{
+    height:60px;
+    width:auto;
+}
+
+/***************************** Nav Items *****************************/
+.NavItems{
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.NavItem {
+    height: 40px;
+    width: 40px;
+    background-color: #333;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+.NavItem .NavLink {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    font-size: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+    text-decoration:none;
+}
+
+.NavItem:hover {
+    background-color: #fff;
+}
+
+.NavItem .NavLink:hover {
+    color: #333;
+}
