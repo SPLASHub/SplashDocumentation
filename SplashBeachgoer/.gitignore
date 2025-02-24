@@ -1,0 +1,13 @@
+/.vs/
+/*.sln
+/splashbeachgoer.client/.vscode
+/splashbeachgoer.client/node_modules
+/splashbeachgoer.client/obj
+/splashbeachgoer.client/eslint.config.js
+/splashbeachgoer.client/*.config
+/splashbeachgoer.client/*.json
+/splashbeachgoer.client/*.esproj
+/SplashBeachgoer.Server/bin
+/SplashBeachgoer.Server/obj
+/SplashBeachgoer.Server/CHANGELOG.md
+/SplashBeachgoer.Server/*SplashBeachgoer.Server.*
