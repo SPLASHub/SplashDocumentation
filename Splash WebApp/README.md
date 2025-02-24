@@ -1,8 +1,8 @@
-# ** Installing Visual Studio and Start Web App **   
+# **🚀 Installing Visual Studio and Starting the Web App**  
 
 ---
 
-## **1. Download Visual Studio **  
+## **1️⃣ Download Visual Studio**  
 ### 🔹 **Step 1:**  
 ➡ Go to the **[Microsoft Visual Studio](https://visualstudio.microsoft.com/)** website.  
 
@@ -11,48 +11,43 @@
 
 ---
 
-## ⚙️ **2. Install Visual Studio**  
+## **2️⃣ Install Visual Studio**  
 ### 🔹 **Step 1: Run the Installer**  
-  Open the downloaded `.exe` file.  
+🔹 Open the downloaded `.exe` file.  
 
 ### 🔹 **Step 2: Choose Workloads**  
-🛠️ Select the required workloads :  
-   - 🌐 **ASP.NET and Web Development**
-   - 🟢 **Node.js Development** 
+🛠️ Select the required workloads:  
+   - 🌐 **ASP.NET and Web Development**  
+   - 🟢 **Node.js Development**  
 
 ### 🔹 **Step 3: Start Installation**  
 ✅ Click **Install** and wait for the process to complete.  
 
 ---
 
-## 🔧 **3. Create Project With Template**  
+## **3️⃣ Create a Project Using a Template**  
 
-### 🔹 **Step 1: Lauch Visual Studio**  
-  Open the downloaded `.exe` file.  
-  
-### 🔹 **Step 2: Create Project** 
-  1️⃣ Select **Create a new project** .
-  
-  2️⃣ Search for **React and ASP.NET Core** (JavaScript version **NOT TYPESCRIPT**) . 
-  
-  3️⃣ Solution name is the name of the folder (**SplashBeachgoer** or **SplashLifeguard** or **SplashBusiness**) . 
-        → Use only SplashBeachgoer 
-  
-  4️⃣ Framework is **.NET 8.0** . 
-  
-  5️⃣ Keep other configurations the same and click on **Create** .  
+### 🔹 **Step 1: Launch Visual Studio**  
+➡ Open **Visual Studio** after installation.  
 
-### 🔹 **Step 3: Test Project** 
-  🔹 Click **Start** .  
-  
-  🔹 Check if a web page started called **Swagger** started. 
-  
-  🔹 Check if a web page started on **LocalHost** started. 
+### 🔹 **Step 2: Create a Project**  
+1️⃣ Select **Create a new project**.  
+2️⃣ Search for **React and ASP.NET Core** (JavaScript version, **NOT TypeScript**).  
+3️⃣ Set the **Solution Name** to one of the following:  
+   - **SplashBeachgoer** ✅ (Only this one for now)  
+   - SplashLifeguard  
+   - SplashBusiness  
+4️⃣ Choose **.NET 8.0** as the framework.  
+5️⃣ Keep other configurations the same and click **Create**.  
 
-### 🔹 **Step 4: Put Our Project** 
-  🔹 Copy the files on github to the project.  
+### 🔹 **Step 3: Test the Project**  
+✅ Click **Start** and verify:  
+   - A web page called **Swagger** opens.  
+   - A web page on **LocalHost** starts successfully.  
+
+### 🔹 **Step 4: Add Our Project**  
+📂 Copy the files from GitHub into the project folder.  
+
 ---
 
-
-**Happy Coding!** 🎯🚀
-
+🎯 **Happy Coding!** 🚀
