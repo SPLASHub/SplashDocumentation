@@ -23,12 +23,16 @@
 ### 🔹 **Step 3: Start Installation**  
 ✅ Click **Install** and wait for the process to complete.  
 
+### 🔹 **Step 4: Install Node**  
+➡ Go to the **[Node](https://nodejs.org/pt)** website.
 ---
 
 ## **3️⃣ Create a Project Using a Template**  
 
 ### 🔹 **Step 1: Launch Visual Studio**  
 ➡ Open **Visual Studio** after installation.  
+➡ Download the **22.14.0** version.
+➡ Check the box for Chocolatey during the install (last panel).
 
 ### 🔹 **Step 2: Create a Project**  
 1️⃣ Select **Create a new project**.  
