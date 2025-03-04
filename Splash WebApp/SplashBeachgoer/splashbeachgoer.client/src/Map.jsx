@@ -91,7 +91,7 @@ function Map() {
                 </div>
 
                 {/***************************** Map *****************************/ }
-                <MapContainer center={[currentLocation.x, currentLocation.y]} zoom={18} scrollWheelZoom={false}>
+                <MapContainer center={[currentLocation.x, currentLocation.y]} zoom={18} scrollWheelZoom={true}>
                     {/***************************** Dependencies *****************************/}
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

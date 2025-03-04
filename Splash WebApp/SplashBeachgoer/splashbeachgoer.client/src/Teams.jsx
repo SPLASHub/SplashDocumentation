@@ -11,7 +11,7 @@ function Teams() {
             <div className="sidebar">
                 <h1>Teams</h1>
                 <div className="sidebar-buttons">
-                    <button onClick={() => setViewMode("teams")}>Teams</button>
+                    <button onClick={() => setViewMode("teams")}>Managment</button>
                     <button onClick={() => setViewMode("schedule")}>Schedule</button>
                     <button>History</button>
                 </div>

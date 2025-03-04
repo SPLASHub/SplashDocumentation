@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import Navbar from './Navbar.jsx';
 import Map from './Map.jsx'
+import Teams from './Teams.jsx'
 
 function App() {
     const [forecasts, setForecasts] = useState();
@@ -38,7 +39,7 @@ function App() {
             </section>
             <h1> Mapa </h1>
             <div className='MapDivision'>
-                <Map />
+                <Teams/>
             </div>
         </section>
     );
