@@ -1,7 +1,7 @@
 import './Navbar.css';
 
 /************************************************************** Navbar **************************************************************/
-function Navbar() {
+function Navbar({setView}) {
     return (
         <nav className="navbar">
             {/***************************** Logo Image *****************************/}
@@ -14,7 +14,9 @@ function Navbar() {
             {/***************************** Navigation Items *****************************/}
             <ul className="NavItems">
                 <li className="NavItem">
-                    <a href="/" className="NavLink"><i className="fa fa-users"></i></a>
+                    <button onClick={() => setView("teams")} className="NavLink">
+                        <i className="fa fa-user"></i>
+                    </button>
                 </li>
                 <li className="NavItem">
                     <a href="/" className="NavLink"><i className="fa fa-eye"></i></a>

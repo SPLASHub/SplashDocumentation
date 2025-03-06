@@ -54,3 +54,15 @@
 .NavItem .NavLink:hover {
     color: #333;
 }
+
+/***************************** Nav Buttons *****************************/
+.NavLink {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+    font-size: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

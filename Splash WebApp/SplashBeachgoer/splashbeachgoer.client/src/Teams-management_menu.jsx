@@ -3,9 +3,9 @@ import './Teams-management_menu.css';
 function TeamManagement() {
 
     const [beaches, setBeaches] = useState([
-        { id: 1, name: "Praia da Rocha", coordinates: [37.1193, -8.5384] },
-        { id: 2, name: "Praia de Carcavelos", coordinates: [38.6772, -9.3337] },
-        { id: 3, name: "Praia do Guincho", coordinates: [38.7344, -9.4722] }
+        { id: 1, name: "Praia da Barra"},
+        { id: 2, name: "Praia de Carcavelos"},
+        { id: 3, name: "Praia do Francelos"}
     ]);
 
     const [teams, setTeams] = useState([
@@ -16,47 +16,67 @@ function TeamManagement() {
     ]);
 
     const [members, setMembers] = useState([
-        "Alice", "Bob", "Charlie", "David", "Emma",
-        "Frank", "Grace", "Hannah", "Isaac", "Jack",
-        "Katie", "Liam", "Mia", "Noah", "Olivia"
+        { id: 1, name: "Alice" },
+        { id: 2, name: "Bob" },
+        { id: 3, name: "Charlie" },
+        { id: 4, name: "David" },
+        { id: 5, name: "Emma" }
     ]);
+
+
 
     const [searchMember, setSearchMember] = useState('');
     const [searchBeach, setSearchBeach] = useState('');
 
-    const handleDragStart = (event, memberName, fromTeam) => {
-        event.dataTransfer.setData('member', JSON.stringify({ name: memberName, fromTeam }));
+    const handleDragStart = (event, member, fromTeam) => {
+        event.dataTransfer.setData('member', JSON.stringify({ id: member.id, name: member.name, fromTeam }));
     };
 
     const handleDrop = (event, targetTeamId) => {
         event.preventDefault();
-        const { name, fromTeam } = JSON.parse(event.dataTransfer.getData('member'));
+        const data = event.dataTransfer.getData('member');
+
+        if (!data) return; // Se não houver dados, não faz nada
+
+        const { id, name, fromTeam } = JSON.parse(data);
+
+        if (!id || !name) return; // Se os dados estiverem corrompidos, não continua
 
         setTeams((prevTeams) =>
             prevTeams.map((team) =>
                 team.id === targetTeamId
-                    ? { ...team, members: [...team.members, name] }
+                    ? { ...team, members: [...team.members, { id, name }] }
                     : team.id === fromTeam
-                        ? { ...team, members: team.members.filter((m) => m !== name) }
+                        ? { ...team, members: team.members.filter((m) => m.id !== id) }
                         : team
             )
         );
 
         if (fromTeam === null) {
-            setMembers((prev) => prev.filter((m) => m !== name));
+            setMembers((prev) => prev.filter((m) => m.id !== id));
         }
     };
 
-    const removeFromTeam = (memberName, teamId) => {
+
+    const removeFromTeam = (memberId, teamId) => {
         setTeams((prevTeams) =>
             prevTeams.map((team) =>
                 team.id === teamId
-                    ? { ...team, members: team.members.filter((m) => m !== memberName) }
+                    ? { ...team, members: team.members.filter((m) => m.id !== memberId) }
                     : team
             )
         );
-        setMembers((prevMembers) => [...prevMembers, memberName]);
+
+        // Retornar o membro removido para a lista de membros disponíveis
+        const removedTeam = teams.find(team => team.id === teamId);
+        if (removedTeam) {
+            const removedMember = removedTeam.members.find(member => member.id === memberId);
+            if (removedMember) {
+                setMembers((prevMembers) => [...prevMembers, removedMember]);
+            }
+        }
     };
+
 
     const addBeach = () => {
         const name = prompt("Enter the name of the new beach:");
@@ -90,8 +110,21 @@ function TeamManagement() {
         )
     );
 
+    const saveChanges = () => {
+        if (window.confirm("Tem certeza que deseja salvar as alterações?")) {
+            console.log("Alterações salvas:", teams);
+        }
+    };
+
+    const cancelChanges = () => {
+        if (window.confirm("Tem certeza que deseja cancelar as alterações?")) {
+            window.location.reload(); // Recarrega a página
+        }
+    };
+
     return (
         <div className="main-container">
+            {/* Barra de pesquisa de praias */}
             <div className="search-bar beach-search">
                 <input
                     type="text"
@@ -103,6 +136,7 @@ function TeamManagement() {
             </div>
 
             <div className="content-wrapper">
+                {/* Lista de membros disponíveis */}
                 <div className="members-container">
                     <h2>Members</h2>
                     <div className="search-bar">
@@ -114,18 +148,20 @@ function TeamManagement() {
                         />
                     </div>
                     <div className="members-list">
-                        {members.filter((member) => member.toLowerCase().includes(searchMember.toLowerCase()))
-                            .map((member, index) => (
-                                <div key={index} className="member"
+                        {members
+                            .filter((member) => member.name.toLowerCase().includes(searchMember.toLowerCase()))
+                            .map((member) => (
+                                <div key={member.id} className="member"
                                     draggable
                                     onDragStart={(e) => handleDragStart(e, member, null)}
                                 >
-                                    {member}
+                                    {member.name}
                                 </div>
                             ))}
                     </div>
                 </div>
 
+                {/* Seção de equipes e praias */}
                 <div className="teams-section">
                     {filteredBeaches.map((beach) => (
                         <div key={beach.id} className="beach-section">
@@ -141,25 +177,35 @@ function TeamManagement() {
                                             onDrop={(e) => handleDrop(e, team.id)}
                                         >
                                             <h3>{team.name}</h3>
-                                            {team.members.map((member, i) => (
-                                                <div key={i} className="member team-member"
-                                                    draggable
-                                                    onDragStart={(e) => handleDragStart(e, member, team.id)}
-                                                >
-                                                    {member}
-                                                    <button
-                                                        className="remove-member-button"
-                                                        onClick={() => removeFromTeam(member, team.id)}
+                                            {team.members.length > 0 ? (
+                                                team.members.map((member) => (
+                                                    <div key={member.id} className="member team-member"
+                                                        draggable
+                                                        onDragStart={(e) => handleDragStart(e, member, team.id)}
                                                     >
-                                                        ❌
-                                                    </button>
-                                                </div>
-                                            ))}
+                                                        {member.name}
+                                                        <button
+                                                            className="remove-member-button"
+                                                            onClick={() => removeFromTeam(member.id, team.id)}
+                                                        >
+                                                            <i className="fa fa-times"></i>
+                                                        </button>
+                                                    </div>
+                                                ))
+                                            ) : (
+                                                <p className="empty-team-message">No members</p>
+                                            )}
                                         </div>
                                     ))}
                             </div>
                         </div>
                     ))}
+
+                    {/* Botões de salvar e cancelar */}
+                    <div className="buttons-container">
+                        <button className="save-button" onClick={saveChanges}>Salvar</button>
+                        <button className="cancel-button" onClick={cancelChanges}>Cancelar</button>
+                    </div>
                 </div>
             </div>
         </div>
