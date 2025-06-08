@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="24.9.2">
+  <diagram name="Página-1" id="k72KFwM7_d1wefOLtKWj">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MX3XM7aBRJemAS1e9480-10" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.66;exitY=0.017;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="MX3XM7aBRJemAS1e9480-1" target="MX3XM7aBRJemAS1e9480-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-11" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Authorized&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Beach Information&lt;/font&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" vertex="1" connectable="0" parent="MX3XM7aBRJemAS1e9480-10">
+          <mxGeometry x="0.0516" y="-2" relative="1" as="geometry">
+            <mxPoint x="2" y="26" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-18" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0.009;exitY=0.637;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="MX3XM7aBRJemAS1e9480-1" target="MX3XM7aBRJemAS1e9480-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-19" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Authorized Beach Information&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" vertex="1" connectable="0" parent="MX3XM7aBRJemAS1e9480-18">
+          <mxGeometry x="-0.1127" y="-2" relative="1" as="geometry">
+            <mxPoint y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-26" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.639;exitY=0.986;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="MX3XM7aBRJemAS1e9480-1" target="MX3XM7aBRJemAS1e9480-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-28" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;New Information&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" vertex="1" connectable="0" parent="MX3XM7aBRJemAS1e9480-26">
+          <mxGeometry x="-0.1313" y="2" relative="1" as="geometry">
+            <mxPoint x="9" y="-43" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-34" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.977;exitY=0.64;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitPerimeter=0;" edge="1" parent="1" source="MX3XM7aBRJemAS1e9480-1" target="MX3XM7aBRJemAS1e9480-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-35" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Beach Information Metrics&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" vertex="1" connectable="0" parent="MX3XM7aBRJemAS1e9480-34">
+          <mxGeometry x="-0.1818" y="3" relative="1" as="geometry">
+            <mxPoint x="21" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 72px;&quot;&gt;SPLASH&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;System&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="320" y="280" width="330" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-8" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.357;entryY=0.034;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MX3XM7aBRJemAS1e9480-2" target="MX3XM7aBRJemAS1e9480-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="250" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-12" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;New Information&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" vertex="1" connectable="0" parent="MX3XM7aBRJemAS1e9480-8">
+          <mxGeometry x="-0.0574" y="-1" relative="1" as="geometry">
+            <mxPoint x="15" y="-35" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-2" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Beachgoers&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="435" y="10" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-13" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Regular Lifeguards&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="10" y="400" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.009;entryY=0.37;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MX3XM7aBRJemAS1e9480-13" target="MX3XM7aBRJemAS1e9480-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-16" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Beach Information Updates&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" vertex="1" connectable="0" parent="MX3XM7aBRJemAS1e9480-14">
+          <mxGeometry x="0.0904" relative="1" as="geometry">
+            <mxPoint x="-16" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-22" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0.361;entryY=0.974;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MX3XM7aBRJemAS1e9480-21" target="MX3XM7aBRJemAS1e9480-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-27" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Aprove and Update&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;Beach Information&lt;/font&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" vertex="1" connectable="0" parent="MX3XM7aBRJemAS1e9480-22">
+          <mxGeometry x="0.0559" y="-2" relative="1" as="geometry">
+            <mxPoint x="-12" y="61" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-21" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Supervisor Lifeguards&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="440" y="830" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-33" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0;exitDx=0;exitDy=0;entryX=0.977;entryY=0.372;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="MX3XM7aBRJemAS1e9480-30" target="MX3XM7aBRJemAS1e9480-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-36" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Miscellaneous Business Informations&amp;nbsp;&lt;/font&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];rotation=0;" vertex="1" connectable="0" parent="MX3XM7aBRJemAS1e9480-33">
+          <mxGeometry x="0.0153" y="-1" relative="1" as="geometry">
+            <mxPoint x="11" y="-10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="MX3XM7aBRJemAS1e9480-30" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Beach Business Owners&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="910" y="400" width="90" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="9q8nbBP-Ps9mVTuVTMKf-1" value="&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;SPLASH&lt;/font&gt;&lt;/b&gt;&lt;div&gt;&lt;b&gt;&lt;font size=&quot;3&quot;&gt;Grupo 14 (JPNV)&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;font size=&quot;3&quot;&gt;V2024/11/09&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="shape=note;size=20;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="205" height="100" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
