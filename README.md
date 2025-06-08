@@ -1,15 +1,17 @@
 # SPLASH - Strategic Prevention and Lifeguard Alert Safety Hub 🌊🚨
 
-Welcome to the official repository for **SPLASH**, a smart safety and prevention system focused on enhancing beachgoer safety and lifeguard efficiency. This project was developed in the scope of **PECI 2024/2025**.
+Welcome to the official repository for **SPLASH**, a smart safety and prevention system focused on enhancing beachgoer safety and lifeguard efficiency. This project was developed as part of **PECI 2024/2025**.
+
+---
 
 ## 🔍 Project Overview
 
 **SPLASH** is a hub for beach safety, combining digital tools, real-time data, and lifeguard alerts to help prevent incidents and promote a safer seaside experience. The system includes:
 
-- Real-time alerts and incident reporting
-- Smart prevention strategies
-- Tools for lifeguards and beachgoers
-- Web-based dashboards and mobile integration
+- Real-time alerts and incident reporting  
+- Smart prevention strategies  
+- Tools for lifeguards and beachgoers  
+- Web-based dashboards and mobile integration  
 
 🌐 **Presentation Website**: [Splash Web Info](https://josmsilva.github.io/Splash_Web_Info/)
 
@@ -34,10 +36,10 @@ Welcome to the official repository for **SPLASH**, a smart safety and prevention
 
 ## 🌐 Azure Deployment (Temporarily Disabled)
 
-> For cost efficiency reasons, the SPLASH Azure deployments have been deactivated.
+> For cost-efficiency reasons, the SPLASH Azure deployments have been deactivated.
 
-- Web Frontend (Lifeguard Interface): [Link (Deactivated)](https://splash-cph4cdf2e4epa3cj.canadacentral-01.azurewebsites.net/)
-- Web Frontend (Beachgoer Interface): [Link (Deactivated)](https://splashbeachgoer-gzhfbydharbgd8a6.canadacentral-01.azurewebsites.net/)
+- **Lifeguard Interface**: [Link (Deactivated)](https://splash-cph4cdf2e4epa3cj.canadacentral-01.azurewebsites.net/)
+- **Beachgoer Interface**: [Link (Deactivated)](https://splashbeachgoer-gzhfbydharbgd8a6.canadacentral-01.azurewebsites.net/)
 
 ---
 
@@ -45,21 +47,35 @@ Welcome to the official repository for **SPLASH**, a smart safety and prevention
 
 This project includes:
 
-- 📱 Progressive Web App for beachgoers
-- 💻 Dashboard for lifeguards and authorities
-- 🧠 AI & IoT integrations (planned for future expansion)
-- 🛟 Real-time communication and alerting system
+- 📱 Progressive Web App for beachgoers  
+- 💻 Dashboard for lifeguards and authorities  
+- 🧠 AI & IoT integrations (planned for future expansion)  
+- 🛟 Real-time communication and alerting system  
+
+---
+
+## 👨‍🏫 Supervisors
+
+- **Samuel Silva** – [sss@ua.pt](mailto:sss@ua.pt)  
+- **Bernardo Marques** – [bernardo.marques@ua.pt](mailto:bernardo.marques@ua.pt)  
+
+---
+
+## 👥 Authors (Grupo 14)
+
+- **98586** David Gabriel Vieira Ribeiro – [davidgvribeiro@ua.pt](mailto:davidgvribeiro@ua.pt)  
+- **50458** João Pedro Nunes Vieira – [joaopvieira@ua.pt](mailto:joaopvieira@ua.pt)  
+- **93279** António Marques da Silva Pedrosa Moreira – [antoniomspmoreira@ua.pt](mailto:antoniomspmoreira@ua.pt)  
+- **103248** José Miguel Guardado Silva – [jm.silva@ua.pt](mailto:jm.silva@ua.pt)  
+- **108668** Luís Manuel Trindade Diogo – [luismtd@ua.pt](mailto:luismtd@ua.pt)  
+- **108467** Marta Cristina Ferreira Coutinho de Almeida – [marta.almeida03@ua.pt](mailto:marta.almeida03@ua.pt)
 
 ---
 
 ## 📎 License
 
-This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for more details.
 
 ---
 
-## 🙌 Contributors
-
-Developed by the SPLASH Team, University of Aveiro – PECI 24/25.
-
-> For more information, visit our [website](https://josmsilva.github.io/Splash_Web_Info/) or contact the project team via the documentation or JIRA system.
+For more information, visit our [presentation website](https://josmsilva.github.io/Splash_Web_Info/).
