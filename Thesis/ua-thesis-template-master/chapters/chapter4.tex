@@ -1,121 +1,475 @@
-\chapter{System Design and Architecture}
-\label{chapter:architecture}
-
-The design and architecture of a system are crucial elements that profoundly impact its functionality, efficiency, and scalability. 
-\\
-This chapter outlines the foundational components of the proposed proof-of-concept for the SPLASH system, illustrating how various elements interact to form a cohesive and effective solution for beach safety management. 
+\chapter{User-Centered Design}
+\label{chapter:stakeholders_personas} 
+In software development and \ac{ux} design, understanding the diverse array of individuals who interact with or are affected by a system is imperative, as this understanding forms the cornerstone to create solutions that not only function well but also are tailored and resonate deeply with their intended users. 
 \\ 
-It explores several essential diagrams that depict the system's architecture and operational framework. Each diagram serves a distinct purpose in visualizing different aspects of the system, enhancing our understanding of its structure and functionality. By systematically analysing these diagrams, we aim to develop a comprehensive understanding of \ac{splash}'s design principles and operational capabilities and lay the groundwork for further exploration into its implementation and potential impact on beach safety management.
+This chapter undergoes a comprehensive exploration of stakeholders and personas, exploring into their motivations and the scenarios in which they operate. By identifying key stakeholders and developing detailed personas, we aim to create an accurate portrayal of our user base. This approach allows the development team to empathize with target audiences needs, anticipate their challenges, and design solutions that truly address their pain points. 
+\\ 
+
+\section{Lifeguard Survey}
+\label{}
+With the objective of understanding the real-world context of lifeguard work, a survey was conducted with the Instituto de Socorro a Náufragos (ISN), which—under the legal regime for lifeguards established by Lei n.º 68/2014 (Artigo 40)\parencite{lei68}—is responsible for certifying all lifeguards in the country, as well as all academies, associations, equipment, and stores that sell said equipment. The ISN also plays an important role in educating and raising the public's awareness of the dangers inherent in beaches and pools, as well.
+The survey was sent directly to the ISN, who promptly distributed it among their lifeguards.
 \\
+\\
+The survey was structured as follows.
+\begin{itemize}
+    \item \textbf{Consent and Data Usage Notice}
+    \item \textbf{Personal Information}
+    \begin{itemize}
+        \item Age Range
+        \item Gender
+        \item Prior Field Experience
+    \end{itemize}
+    \newpage
+    \item \textbf{Field Related Questions}
+    \begin{itemize}
+        \item What is your work environment? (Beach, pool, etc.)
+        \item What is a typical day of your life as a lifeguard?
+        \item What are your main responsibilities and tasks?
+        \item What kind of equipment and resources do you have available to carry out your job 
+        \item Is there any equipment (or technology) you feel is missing or would like to have to better help you work?
+        \item Are there recurring frustrations at work? How do you handle them?
+        \item How does communication work between lifeguard team members?
+        \item Do you use any system or technology to keep in touch?
+        \item How is the organization of lifeguards structured? (i.e. vigilance areas, shifts, etc.)
+        \item If so, how is it managed?
+        \item What are the most common situations that require your attention?
+        \item What are some emergencies you have faced?
+        \item Can you describe the procedure for the case of a drowning?
+        \item How do you handle stress during emergencies?
+        \item Leave your suggestions and opinions.
+    \end{itemize}
+\end{itemize}
 
-\newpage
-\section{Context Diagram}
-\label{section:context_diag}
-This diagram \ref{fig:context_diag} offers a comprehensive, high-level overview of the system's interactions with external entities, highlighting key interfaces and relationships.
+\subsection{Survey Results Overview}
+In total, the survey ended with 357 answers from the Portuguese lifeguards. 
+While the open ended nature of the survey's questions was intentional, since the team had little to no knowledge of the field's requirements and necessities, this resulted in a sizeable amount of information to process. The method for analysis was mainly quantitative, by keeping a tally of each topic mentioned in an answer. This method ensured the most common and shared experiences to be highlighted, while not discarding any topic unique to specific people and their experiences and conditions.
 
-\begin{figure}[H]
-      \centering
-      \includegraphics[width=16cm]{figs/context_diagram.png}
-      \caption{SPLASH: System Context Diagram. For a more detailed view: \url{https://github.com/JoaoPNVieira/PECI-24-25/tree/main/Milestones}}
-      \label{fig:context_diag}
-\end{figure}
+\subsubsection{\textbf{Personal Information}}
+In this section the lifeguards were asked their gender, age, years of experience, and what kind of station they work at. Despite being developed mainly for oceanic beaches, the survey did not exclude the other lifeguard's experiences.
+\\
+\\
+The majority of respondents identified as male, accounting for 78\% of the sample. Female respondents represented 21\%, while 1\% either identified as another gender or chose not to disclose their gender. This distribution reflects a predominantly male demographic among the surveyed lifeguards, which may be indicative of broader trends in the profession.
+\\
+\\
+Regarding age, 48\% of respondents were between 18 and 24 years old, representing the largest age group in the sample. A further 35\% were aged between 25 and 34, followed by 13\% aged between 35 and 45. Only 4\% of participants were over 45 years old. This distribution suggests that the surveyed lifeguards are predominantly young adults, which aligns with the physically demanding nature of the profession.
+\\
+\\
+In terms of professional experience, 47\% of the respondents reported having between 1 and 3 years of experience as lifeguards. Another 25\% had between 4 and 6 years, while 16\% had between 7 and 10 years. The remaining 12\% had over 10 years of experience.
 
-\newpage
-\section{High-Level Architecture Diagram}
-\label{section:high_level_diag}
-This section presents a diagram \ref{fig:diag_high_level.png} that serves as an architectural blueprint of the system, showcasing its major components and their relationships, which is crucial for understanding the overall structure.
+\subsubsection{\textbf{Field Related Questions}}
 
-\begin{figure}[H]
-      \centering
-      \includegraphics[width=16cm]{figs/diag_high_level.png}
-      \caption{SPLASH: System High-Level Architecture Diagram. For a more detailed view: \url{https://github.com/JoaoPNVieira/PECI-24-25/tree/main/Milestones}}
-      \label{fig:high_level_diag}
-\end{figure}
+\paragraph{
+\textbf{1. What is your work environment?}
+\\
+Respondents reported working across a variety of lifeguard settings. A total of 25\% of participants indicated working at ocean beaches, 12\% at river or lake beaches (inland waters), 29\% in swimming pools, and 4\% at water parks. This distribution reflects the diversity of operational environments in which lifeguards perform their duties, each with its own set of risks, procedures, and communication demands.}
 
-\newpage
-\section{Use-Case Diagram}
-Here \ref{fig:use_case_diagram}, we will define the various user interactions with the system, identifying key functionalities that serves to both beachgoers and lifeguards organizations. 
+\paragraph{
+\textbf{2. What is a typical day of your life as a lifeguard?}
+\\
+A typical day for a lifeguard in Portugal is highly structured, long, and centered on vigilance. While routine and quiet for some, the need to stay alert is a shared experience. Most lifeguards perform consistent operational duties such as setting up the post, monitoring the beach, and engaging with bathers for preventive action.
+\\
+There’s a clear emphasis on team collaboration and effective communication, supported by widespread use of radios and binoculars, which will be further addressed in it's own question.}
 
-\begin{figure}[H]
-      \centering
-      \includegraphics[width=16cm]{figs/use_case_diagram.png}
-      \caption{SPLASH: System Use-Case Diagram. For a more detailed view: \url{https://github.com/JoaoPNVieira/PECI-24-25/tree/main/Milestones}}
-      \label{fig:use_case_diagram}
-\end{figure}
 
-\newpage
-\section{Components Diagram}
-This diagram \ref{fig:componets} delves into the individual components of the system, illustrating how they work together to deliver the desired outcome.
-
-\begin{figure}[H]
-      \centering
-      \includegraphics[width=16cm]{figs/componets.png}
-      \caption{SPLASH: System Components Diagram. For a more detailed view: \url{https://github.com/JoaoPNVieira/PECI-24-25/tree/main/Milestones}}
-      \label{fig:componets}
-\end{figure}
-
-\newpage
-\section{Data Flow Diagram}
-In this section the diagram \ref{fig:data_flow} visualizes the flow of data within the system, providing insights into how information is processed and utilized to enhance decision-making.
-
-\begin{figure}[H]
-      \centering
-      \includegraphics[width=16cm]{figs/data_flow.png}
-      \caption{SPLASH: System Data Flow Diagram. For a more detailed view: \url{https://github.com/JoaoPNVieira/PECI-24-25/tree/main/Milestones}}
-      \label{fig:data_flow}
-\end{figure}
-
-\newpage
-\section{Deployment Diagram}
-The following diagram \ref{fig:deployment} will outline how the system will be deployed in real-world scenarios, detailing the physical arrangement of hardware and software components.
-
-\begin{figure}[H]
-      \centering
-      \includegraphics[width=16cm]{figs/deployment.png}
-      \caption{SPLASH: System Deployment Diagram. For a more detailed view: \url{https://github.com/JoaoPNVieira/PECI-24-25/tree/main/Milestones}}
-      \label{fig:deployment}
-\end{figure}
-
-\newpage
-\section{General Architecture Diagram}
-Finally, this diagram \ref{fig:general_architecture} encapsulates all architectural elements into a single view, summarizing how SPLASH operates as a unified system.
+\paragraph{
+\textbf{3. What are your main responsibilities and tasks?}
+\\
+Portuguese lifeguards describe their role to be mainly rooted in prevention, constant vigilance, and public interaction. These seem to be their top concern, as they were reflected in most answers.
+\\
+When prevention fails, however, first aid, verbal guidance and rescues are also recognized as essential. Other less mentioned duties are operational support (such as setting up posts, checking equipment, and preparing the area at the start and end of each shift). Reporting and documentation, as well as beach maintenance, were more scarcely brought up.}
 
 \begin{figure}[H]
       \centering
-      \includegraphics[width=16cm]{figs/general_architecture.png}
-      \caption{SPLASH: System General Architecture Diagram. For a more detailed view: \url{https://github.com/JoaoPNVieira/PECI-24-25/tree/main/Milestones}}
-      \label{fig:general_architecture}
+      \includegraphics[width=14cm]{figs/questiongraf/image2.png}
+      \caption{Number of mentions of each keyword in Question 2.}
+      \label{fig:question2}
 \end{figure}
 
-\section{Candidate Technologies}
-\label{section:candidate_tech}
-%
-In this project, after developing various diagrams and engaging in multiple discussions, it was decided to create a web app using React and implement a relational database. Simultaneously, it was determined that the wearables would include GPS functionality and identification through RFID technology.
 
-The decision to use React for the web app was based on its flexibility, component-based structure, and ability to build highly interactive user interfaces. 
+\paragraph{
+\textbf{4. What kind of equipment and resources do you have available to carry out your job?}
+\\
+Based on the answers given, lifeguards in Portugal rely on a consistent set of equipment:
+\\
+\textbf{Rescue gear:} e.g. rescue buoys, rescue boards, fins, poles and rescue tubes.\\
+\textbf{Communication tools:} e.g. radios, megaphones and cellphones.\\
+\textbf{First aid kits:} \textit{Note:} defibrillators, oxygen and more advanced material were very rarely mentioned.\\
+\textbf{Post infrastructure:} lifeguard towers or chairs, sunshades, flags and signalling tools.\\
+\textbf{Visual tools:} binoculars were mentioned frequently, especially for larger beaches or rocky coastlines.}
 
-A relational database was chosen to efficiently manage structured data and relationships, ensuring scalability and reliability.
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=15cm]{figs/questiongraf/image4.png}
+      \caption{All mentions of responsibilities and tasks in Question 3.}
+      \label{fig:question3}
+\end{figure}
 
-The inclusion of GPS in the wearables allows real-time location tracking, crucial for features such as safety monitoring and providing alerts about hazardous zones. 
+\paragraph{
+\textbf{5. Is there any equipment (or technology) you feel is missing or would like to have to better help you work?}
+\\
+The majority of lifeguards surveyed seem satisfied with their current equipment, even if they can identify missing or faulty material. Communication and surveillance tools are at the top of the list, followed by post infrastructure and digital apps for team coordination. 
+\\
+These answers reveal a blind spot in these systems, where communication and surveillance tools are either lacking or split into various miscellaneous solutions. This reveals a lack of a single, all encompassing system that every lifeguard could use anywhere in the country.}
 
-RFID technology ensures quick and secure identification of users, enabling seamless integration with other systems and functionalities, such as linking individual profiles to specific devices or locations.
+\paragraph{
+\textbf{6. Are there recurring frustrations at work? How do you handle them?}
+\\
+Lifeguards report a broad range of challenges, the most common being overcrowded beaches and non-compliant or disrespectful beachgoers, both of which directly impact their ability to ensure safety. The natural environment itself — including the rough weather and tides — only add unpredictability to their day to day work.
+\\ 
+Emotional and mental stress are also stated to be a major concern. Lifeguards carry a lot of responsibility, and problems with rule enforcement, inadequate pay, lack of support from authorities, team dysfunction and limited resources further compound the difficulty of the job. 
+\\
+Many lifeguards work under high amounts of stress and these external factors, although out of their control, impact their effectiveness.}
 
-This architecture ensures that the solution is robust, user-friendly, and capable of addressing the key objectives of the project while leveraging modern technologies to enhance safety and usability
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=16cm]{figs/questiongraf/image7.png}
+      \caption{Key answers found in Question 5.}
+      \label{fig:question5}
+\end{figure}
 
-\section{Database Design}
-\label{section:dbdesign}
+\paragraph{
+\textbf{7. How do you deal with frustration or difficulties on the job?}
+\\
+Respondents overwhelmingly rely on emotional self-regulation to handle job-related frustrations, often citing the need to remain calm, neutral, and professional. Many also highlight the importance of talking with colleagues or a team coordinator to decompress and gain perspective.
+\\
+A large portion of answers also reflects a quiet resilience — either by adapting over time or consciously ignoring minor irritations. A minority of lifeguards turn to personal mental health tools (e.g., meditation or exercise), while others admit to struggling with no real strategy in place.
+\\
+This question reveals a community that is often self-reliant and emotionally disciplined, yet still vulnerable to accumulated stress, especially when isolated or unsupported.}
 
-As mentioned earlier, the project will utilize a relational database connected to a \ac{dbms}. Below is the initial draft following our requirements analysis:
+\paragraph{
+\textbf{8. How does communication work between lifeguard team members?}
+\\
+Lifeguard team communication is multimodal and situational. The most widely used method is two-way radios, particularly in more structured or larger beach environments. Verbal and visual communication are common when guards are nearby or during low-intensity periods.
+\\
+Interestingly, a significant number of teams rely on personal mobile phones and WhatsApp for informal communication — a practical solution, though potentially risky in emergencies or official contexts.
+\\
+Several respondents also express frustration with unreliable or absent tools, especially on more spread-out beaches. In contrast, some emphasize clarity and teamwork, noting that communication works well when protocols and mutual understanding are in place.}
 
-\subsection{Entity Relationship Diagram}
-\label{subsection:DER}
+\paragraph{
+\textbf{9. Do you use any system or technology to keep in touch?}
+\\
+Most lifeguard teams report using radios and mobile phones as their primary communication tools. However, a striking number (87) claim that no formal technology or systems are in use, suggesting that it varies across different beaches and lifeguard teams.
+\\
+It is also worthy of note that some teams are using consumer communication apps (e.g., WhatsApp), which seems to be the most convenient of options and may be a standard in the future.}
 
-    \begin{figure}[H]
-          \centering
-          \includegraphics[width=16cm]{figs/DER.png}
-          \caption{SPLASH: Entity Relationship Diagram. For a more detailed view: \url{https://github.com/JoaoPNVieira/PECI-24-25/tree/main/Milestones}}
-          \label{fig:DER}
-    \end{figure}
+\paragraph{
+\textbf{10. How is the organization of lifeguards structured?}
+\\
+Shift structure in lifeguard teams tends to be long and intense, commonly 10-hour shifts, 6 or 7 days per week. This is often coordinated by a team leader or coordinator, with rotating lunch breaks being the standard method for maintaining coverage during meals.
+\\
+Vigilance areas are generally clearly defined, with posts covering 50 to 100 meters each. There is also a clear awareness of fatigue, leading many teams to implement rotation between static posts and more active beach watch roles.
+\\
+Still, the data exposes variation in structure (some teams improvise, while others depend on rigid schedules). A notable portion report concerns with overwork, payment irregularities, or insufficient staff, reflecting broader systemic issues in beach management.}
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=16cm]{figs/questiongraf/image8.png}
+      \caption{Graph of answers to Question 9.}
+      \label{fig:question8}
+\end{figure}
+
+\paragraph{
+\textbf{11. If so, how is it managed?}
+\\
+Operational coordination for lifeguards is largely centralized, typically under the guidance of a coordinator or head lifeguard. These individuals define shift schedules, assign vigilance areas, and often mobilize teams during incidents. Associations or concessionaires also play a planning role in some regions.
+\\
+In a notable subset, team autonomy is the norm — shifts and tasks are agreed upon by the team directly, depending on availability or number of beachgoers. There’s frequent rotation between posts, and many beaches use structured planning for lunch breaks to maintain full coverage.
+\\
+Some teams employ organized systems like alphanumeric codes for post labeling, and integrated planning systems were mentioned in rarer cases.}
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=16cm]{figs/questiongraf/image9.png}
+      \caption{Lifeguard station management pie chart}
+      \label{fig:question10}
+\end{figure}
+
+\paragraph{
+\textbf{12. What are the most common situations that require your attention?}
+\\
+The Portuguese lifeguards overwhelmingly identify children as the most at-risk population on monitored beaches. This includes children unattended or playing too close to water. Elderly individuals and pregnant women also figure prominently in perceived risk groups, largely due to physical frailty or vulnerability in emergencies.
+\\
+Other mentions include people with disabilities, those swimming far from shore or near riptides, and tourists or foreign individuals whose unfamiliarity with local safety cues may increase risk.
+\\
+A small number of lifeguards emphasize that everyone is treated equally, though the general trend reveals distinct prioritization based on observable vulnerability.}
+
+\paragraph{
+\textbf{13. What are some emergencies you have faced?}
+\\
+This question reveals that lifeguards face a wide range of high-risk and life-threatening situations, with drownings or near-drownings being by far the most frequent critical scenario described. These range from children swept away by currents to unconscious adults pulled from the sea.
+\\
+Other significant categories include missing people, often children or the elderly, and serious medical emergencies, such as heart attacks or seizures, which require immediate attention and often emergency service coordination. Injuries from falls, fractures, marine wildlife stings, and bleeding wounds also frequently appear.
+\\
+Several responses refer to complex, multi-victim rescues, CPR procedures, and occasionally fatal outcomes, underlining the gravity of real-world lifeguard duties.}
+
+\paragraph{
+\textbf{14. Can you describe the procedure for the case of a drowning?}
+\\
+Lifeguards responding to this question consistently describe a structured and standardized response to drownings or near-drownings. The most cited procedures include activating emergency services (112), performing visual and auditory checks, initiating CPR or basic life support, and relocating the victim to a safe position.
+\\
+Responses also show strong awareness of correct protocols and rescue algorithms, including proper use of rescue tools and evaluating the victim’s level of consciousness. There is also attention to post-rescue care, including the use of oxygen and monitoring for potential complications.
+\\
+A few respondents expressed that while they haven’t performed a real-life drowning rescue, they are trained and describe the theoretical steps clearly.}
+
+\paragraph{
+\textbf{15. How do you handle stress during emergencies?}
+\\
+Most lifeguards in this survey report that remaining calm is the number one priority when facing stressful rescue situations. For many, training and repetition lead to automatic responses that override panic, allowing actions to be guided by protocol and experience rather than emotion.
+\\
+Numerous responses describe the need to focus entirely on the task or the victim, consciously block out bystanders, and avoid external pressure. Some use breathing techniques or other personal coping strategies to maintain a stable mindset.
+\\
+Teamwork is also emphasized as a strong buffer against stress, with many indicating that relying on a partner, sharing responsibility, or even voicing procedures aloud helps center focus. A few admit that stress and reflection hit only after the event, showing a clear “performance-first, process-later” mental framework.}
+
+\subsubsection{\textbf{Survey Conclusion}}
+The collective responses across all the survey's questions have provided a rich and authentic view into the reality, challenges, strategies and overall behaviour of lifeguards operating in all sorts of contexts and real life scenarios. These first hand accounts are the foundation for \ac{splash}'s user-centered design.
+\\
+Through this feedback, we were able to extract core themes around the operational structure, stress management, hazard identification, communication and team dynamics currently in use on the field. This allowed the creation of highly representative personas. 
+\\
+These insights reveal nuanced needs, mental models and emotional coping strategies that otherwise could not be captured or understood. The diversity and consistency of the responses not only gave us a data rich foundation for the project's development, but also personally grounded narratives that influenced the future of \ac{splash}'s platform design, from hazard reporting to shift coordination features.
+
+\section{Stakeholders}
+\label{section:stakeholders} 
+The following list presents the key stakeholders (and individuals or groups who have high interest in the project’s outcome) identified for the \ac{splash} system: 
+
+\begin{itemize}
+    \item \textbf{Primary Stakeholders - Lifeguards:}
+    \begin{itemize}
+        \item Play a critical role in ensuring beach safety.
+        \item Primary users of the \ac{splash} system.
+        \item Benefit from tools for real-time monitoring, efficient incident prevention and management, and proactive hazard identification.
+        \item System designed to support and enhance their performance.
+    \end{itemize}
+
+    \item \textbf{Secondary Stakeholders - Beachgoers:} 
+    \begin{itemize}
+        \item Interact with the web application.
+        \item View and report beach hazards, providing valuable information for lifeguards.
+        \item Access information on lifeguard locations.
+        \item View beach-related information such as weather conditions.
+    \end{itemize}
+
+    \item \textbf{Secondary Stakeholders - Beach Business Owners:} 
+    \begin{itemize}
+        \item Interact with the web application as beachgoers.
+        \item Can increase their business clientele and profits by accessing premium features through a paid account, which enables them to list their business information, prices, location, and more.
+        \item Provide an initial monetization avenue for the system.
+    \end{itemize}
+\end{itemize}
+
+\section{Personas, Motivations \& User Scenarios}
+\label{section:personas}
+
+The main personas are described in the following list:
+
+\begin{itemize}
+    \item \textbf{Lifeguard Supervisor}
+    \item \textbf{Regular Lifeguard}
+    \item \textbf{Beachgoer}
+    \item \textbf{Business owner}
+\end{itemize}
+
+\subsection{Lifeguard Supervisor}
+\subsubsection{\textbf{Biography}}
+Miguel is a 34 year old lifeguard, born on October 14, 1990, in Funchal (Madeira), and raised in Cascais, where he was always immersed in beach life and water activities. Miguel has always held a deep affection for the beaches and sea of his home-town and later embarked on various journeys along Portugal’s coastline to experience the country's diverse beaches and tides. Thanks to his lifelong connection to the sea, Miguel knew he wanted to work close to it. He took a degree in Physical Education and Sports while also completing certifications as a lifeguard and teacher. He began working as a lifeguard during beach seasons, and outside of these periods, he worked in gyms and fitness academies, teaching swimming and functional training.
+
+Miguel’s first experience as a lifeguard was both enriching and challenging. His training provided him with all the tools he needed for the job, but theoretical knowledge couldn’t replace the practical skills acquired on the field. He initially struggled with maintaining near-constant focus on beach-goers and often found himself frustrated by swimmers choosing less visible spots. Thankfully, his more experienced colleague supported him every step of the way. Today, Miguel considers the most important lesson from those early days to be the value of having a mentor during the learning process. In the years that followed, Miguel worked as a Swimming Instructor and Swimming Team Coach, roles that complemented and were complemented by his work as a lifeguard. At 28, he became a Physical Education Teacher. Here, he directly experienced some of the frustrations of parents he had often observed at the beach, trying their best to supervise children or manage certain activities.
+
+Now considered a veteran within the lifeguard community, Miguel takes on the role of mentor for novices and aspiring lifeguards who choose to embrace the challenge. He recognizes in their mistakes and frustrations the same ones he experienced many years ago. But while some things remain unchanged, many others have evolved. Technology has advanced exponentially since his childhood. Mobile phones have become smartphones, the internet is now wirelessly accessible, and weather forecasts have become more accurate and available in real-time. Miguel also sees a stronger attachment to technology among the newer generations and a greater disconnect from the environment. He believes that with the right approach, technology can be used to complement human limitations.
+
+\subsubsection{\textbf{Motivation}}
+Miguel wants to improve the management of lifeguard teams. He seeks a broader and more integrated view of the beach environment, as well as tools for signalling hazardous situations.
+\subsubsection{\textbf{Mega Scenario: ``A Summer Day: Management and Surveillance''}}
+\subsubsection{\textbf{Scenario 1:} Miguel Logs in to Monitor the Beach and Approves a New Lifeguard Registration}
+Miguel starts his day by checking the beach monitoring system. He accesses the required URL, clicks on Login, and enters his credentials before clicking ``Submit.'' He then views the camera activity and hazard zones on the interactive map. While observing the beach in real-time, he ensures that the busiest areas are monitored and adjusts the interactive map to assign teams to specific monitoring zones by clicking on the location of each lifeguard post and allocating team members based on their schedules via the ``Schedule'' tab. 
+
+A few minutes later, he receives information about the registration of a new lifeguard. Miguel accesses the ``Team Management'' section and confirms the registration by clicking the ``Accept'' button, allowing the new team member to begin their duties.
+
+\subsubsection{\textbf{Scenario 2:} Miguel Receives a Request to Analyze a Hazard Zone for Weever Fish Stings and Sends a Lifeguard to Investigate}
+Miguel receives an alert on his interactive map. He clicks on the red circle with the ``eye'' icon and sees that a beachgoer has requested an analysis of a hazard zone due to ``Weever Fish Sting.'' Miguel quickly clicks the ``Send Lifeguard'' button and selects the nearest lifeguard to investigate. Moments later, the hazard zone is confirmed by his colleague. Miguel then adjusts the hazard zone settings, draws the specific area on the screen with his finger, and clicks ``Issue Alert,'' sending a visual notification (map drawing) to all beachgoers with system access, indicating the danger zone. He feels satisfied knowing the information is quickly disseminated, ensuring safety.
+
+\subsubsection{\textbf{Scenario 3:} Miguel Receives an Emergency Notification About a Lost Child}
+An alert notification arrives on his system: ``Bracelet associated with a child is emitting an alert signal.'' Miguel immediately clicks the ``Respond'' button and, with the guardian's automatic authorization, checks the GPS location of the child. He then clicks the ``Send Lifeguard'' button, assigning lifeguard Joana Costa, who is the closest to the child's location, to the emergency. Joana quickly proceeds to handle the situation.
+
+\subsubsection{\textbf{Scenario 4:} Miguel Observes and Coordinates the Rescue of a Swimmer Using a Drone and Detection Cameras}
+Through the camera mounted at the lifeguard post, Miguel notices that a swimmer, Maria Fernandes, has crossed the safety limit and appears to be in trouble in the water. Based on his experience, he quickly deduces that Maria is suffering from a cramp and is in a location where she cannot touch the bottom. Miguel immediately clicks the ``Pre-Drowning'' button and marks the approximate location on the map, alerting the nearest lifeguard. 
+
+He then clicks the ``Send Drone'' button, puts on the VR goggles, and takes control of Rescue Drone No. 1, which emits its GPS location to the field lifeguard system. Moments later, the drone reaches Maria's location, and Miguel uses the drone's speaker to communicate: 
+``Stay calm. I’m dropping a rescue buoy. Hold on and stretch your leg to relieve the cramp. Help is on the way.'' He commands the drone to release the rescue buoy. Shortly after, lifeguard Joana Costa arrives to assist Maria.
+
+After resolving the issue, Miguel accesses the interactive map in the application, draws a red circle around the dangerous area, and marks it as ``Rip Current,'' sending a visual notification (drawing) to beachgoers and colleagues about the zone.
+
+\subsubsection{\textbf{Scenario 5:} Miguel Corrects Errors by Analysing Weather Conditions, Updates the Flag Status, and Accesses the Beach History and Metrics}
+Miguel accesses his interactive map and reviews the ``Weather Conditions'' tab, which shows favourable conditions for beach activities (Temperature: 35ºC, Waves: 0.5 meters, Wind: 1 km/h, etc.). He verifies that the flagged status is correct (green) but notices that the system indicates the wrong flag. He clicks on the yellow flag icon at the respective post and changes it to ``Green.'' 
+
+Later, he accesses the ``History and Metrics'' tab. This section provides a complete history and metrics of the beach (e.g., Problematic Areas, Average Number of Incidents per Month/Year). Using this data, Miguel begins to design future safety strategies based on the insights from this section.
+
+\subsubsection{\textbf{End of the Mega Scenario}}
+At the end of the day, Miguel reflects on how technology has improved communication and the efficiency of his team.
 
 
+\subsection{Regular Lifeguard}
+\subsubsection{\textbf{Biography}}
+Joana Costa is a 19 year old lifeguard, born on April 26,2005 , in Portimão. From an early age, her connection to the sea shaped her passion for the beach and aquatic environments. At just two years old, she began swimming and, over the years, developed into a talented competitive athlete.
+
+In 2023, Joana decided to follow her passion and enrolled in the Bachelor’s program in Sports Science at the University of Coimbra. However, after a few months in the course, her parents realized they couldn’t financially support her studies beyond the first year due to the rising cost of living. Determined not to give up on her goals, Joana sought a solution and enrolled in the Lifeguard Training Course at EFNSP.
+
+With her experience as an athlete and her deep knowledge of the aquatic environment, Joana easily passed both the physical and theoretical tests, completing the course in January 2024. By late May, she was preparing to begin her first summer season as a lifeguard. Accustomed to the calm, warm waters of the Algarve, Joana was eager to face new challenges on the beaches of the central region.
+
+However, her first day on the job brought an unexpected twist. What started as a calm, sunny afternoon quickly changed with the arrival of a dense fog from the north, drastically reducing visibility. Concerned about the large number of swimmers in the water, Joana remained vigilant.
+
+Suddenly, a man approached her, visibly distressed, reporting that his 13-year-old son, who had been bodyboarding, was missing. In a mix of adrenaline and focus, Joana used her binoculars to try to locate the boy, but the dense fog made it impossible to spot him. Without hesitation, she grabbed her board and entered the water to search for the boy. After 15 minutes of searching with no success, she reported the disappearance to the maritime police.
+
+Fortunately, the rescue was successful, and the boy was found being carried by a current, with no serious injuries. Despite the positive outcome, the incident left Joana emotionally shaken. The feeling of helplessness for not being able to act faster stayed with her, challenging her to become even more vigilant and prepared for future emergencies.
+
+\subsubsection{\textbf{Motivation}}
+Joana would like to have a broader view of the beach she monitors and better communication with her colleagues.
+
+\subsubsection{\textbf{Mega Scenario: ``A Day of Action for Joana''}}
+\subsubsection{\textbf{Scenario 1:} Joana Arrives at an Unknown Beach and Logs in as a Lifeguard to Start her Shift}
+Joana arrives at a new beach, excited for her first day as a lifeguard. At the entrance, she notices a QR code and decides to scan it. Joana creates an account (Sign in) and logs in. The tablet provides information about the beach, including the presence of dangerous currents and the location of other lifeguards. Two minutes later, she receives confirmation that her account has been approved by the supervising lifeguard, ``Miguel Soares,'' along with details about her schedule, team, and assigned station. This information boosts her confidence, knowing she can rely on her team's support.
+\subsubsection{\textbf{Scenario 2:} Joana Receives an Emergency Alert ``Lost Child''}
+While monitoring the beach from her chair, Joana receives a notification on her device: ``ALERT: Swimmer in difficulty.'' She quickly heads to the area indicated on the interactive map and encounters a worried father, Ricardo, who is trying to locate his son who has drifted too far. Joana uses a GPS bracelet to help Ricardo determine the child's location. Following the tablet's instructions, Joana quickly finds the child playing with other kids. Relieved, she brings the child back to the safe area where Ricardo is anxiously waiting. Grateful for her swift action and the use of technology that facilitated locating his son, Ricardo thanks Joana deeply. Joana then logs into her tablet and marks the situation as ``Successfully Resolved.''
+\subsubsection{\textbf{Scenario 3:} Joana Is Notified to Analyse a Potential Danger Zone on the Sand}
+During her shift, Joana receives an alert on her device: ``ALERT: Danger, Debris on the Sand,'' reported by a beachgoer. She quickly moves to the indicated location, where she finds broken glass, confirming the alert's accuracy. Joana physically cordons off the dangerous area and uses her tablet to alert her supervisor, Miguel, enabling him to contact the appropriate services to clean the site.
+\subsubsection{\textbf{Scenario 4:} Joana Is Alerted to an Emergency and Rescues a Swimmer in Pre-Drowning}
+During her shift, Joana notices a drone flying over the beach. Miguel, who is at the command post, informs her via tablet about a situation where a swimmer is drifting into open water. Using the tablet, Joana quickly confirms the swimmer's location and heads into the water. Upon entering, she spots the swimmer, Maria, in distress. Following Miguel's instructions, she uses a rescue buoy dropped by the drone to successfully save Maria.
+\subsubsection{\textbf{Scenario 5:} Joana Requests a Schedule Change and Performs Shift Handover}
+As her shift comes to an end, Joana is notified via tablet that she is about to be relieved by her colleague, ``Eduardo Monteiro,'' who will meet her at her station. Joana reviews her schedule and notices a conflict for the following Thursday due to a medical appointment. She clicks on the ``Lifeguard Hub'' button, selects ``My Schedule,'' and accesses the ``Calendar'' option. She then clicks on ``Request Change,'' providing the reason for the request. Next, she selects ``Shift Handover,'' where she inputs relevant details about her shift for her replacement.
+\subsubsection{\textbf{End of the Mega Scenario}}
+After an intense workday, Joana reflects on the importance of technology for performing rescues and fostering collaboration among lifeguards. She realizes that, even as a newcomer to the profession, she can make a significant difference with the right support.
+
+
+\subsection{Business owner}
+\subsubsection{ \textbf{Biography}}
+Ricardo, a 40 year old beach bar owner and occasional vendor of American waffles, lives in Vila Nova de Gaia and inherited the business from his father, which is why he didn’t pursue higher education. He is married to the woman he met in his youth, and together they have two children, aged 10 and 7. One of his favourite hobbies is going to the beach with his family to enjoy quality time together.
+
+One summer day, Ricardo went to the beach with his family, but upon arrival, he discovered that the beach was not supervised. He became worried about his children's safety since he didn’t know how to identify the most dangerous areas and had no way of predicting this situation before leaving home.
+
+On another occasion, Ricardo took his children alone to a supervised beach, but it was very crowded, making it difficult for him to watch over both kids at the same time. This caused him more concern and limited his enjoyment of the outing.
+\subsubsection{\textbf{Motivation}}
+Ricardo would like to have a way to receive information about the beach he is visiting and an easier way to monitor his children while they are at the beach.
+
+\subsubsection{\textbf{Mega Scenario: ``A Summer Day in Ricardo's Life''}}
+On a sunny morning, Ricardo, a 40-year-old father, decides to enjoy his day off with his wife and two children, aged 10 and 7. Excited, the family prepares their beach essentials, applying sunscreen and packing snacks and sand toys into a bag. After a short 20-minute car ride, they arrive at their favourite beach, eager for a relaxing day.
+
+\subsubsection{\textbf{Scenario 1:} Ricardo Visits an Unsupervised Beach and Uses the App to Get Beach Information}
+Upon arriving at the beach, Ricardo notices something unsettling: the beach is not supervised by lifeguards that day. As a protective father, he quickly feels the responsibility to ensure his children’s safety. With his heart racing and worried about currents and potential hazards, he begins to look for solutions.
+
+Noticing a QR code posted at the beach entrance, Ricardo scans it with his phone. The code redirects him to a website with detailed information about the beach conditions. The technology provides him with a sense of relief. On the site, he finds a map indicating areas with weaker currents and the location of submerged rocks — crucial information for ensuring his family’s safety. The site also offers safety tips for dealing with unsupervised beaches, which reassures Ricardo.
+
+Armed with this knowledge, Ricardo takes a deep breath and guides his family to a designated safe area. There, they can finally relax and enjoy their day without the constant feeling of imminent danger. Still attentive, Ricardo feels more at ease knowing he is well-informed.
+
+\subsubsection{\textbf{Scenario 2:} Ricardo Visits a Supervised Beach Offering GPS Bracelets}
+Later, after lunch, Ricardo’s wife returns to work, and he decides to head back to the beach with his two children. This time, the beach is supervised, and upon advice from another beachgoer, Maria Fernandes, he scans the QR code again and discovers something new. The site informs him that the lifeguard post offers a GPS bracelet system to monitor children. This immediately captures his attention, as being alone with two active children makes him feel the need for additional safety measures.
+
+Ricardo approaches the lifeguard post, where he meets Joana, a young lifeguard who assists him. She explains that the GPS bracelets allow real-time monitoring of children’s locations and send alerts if they stray beyond a predefined radius. Impressed, Ricardo decides to rent three bracelets: one for himself and two for his children.
+
+Throughout the afternoon, Ricardo relaxes while watching his children play, with the added peace of mind that he will be immediately notified if something happens. Whenever one of the children tries to leave the safe area, Ricardo’s bracelet vibrates softly, alerting him to call his children back.
+
+\subsubsection{\textbf{Scenario 3:} One of Ricardo’s Children Disappears on the Beach with the GPS Bracelet}
+Near the end of the afternoon, as Ricardo relaxes, he feels a vibration on his wrist. One of his children has wandered beyond the safe zone set by the GPS bracelet. Ricardo’s heart races. He looks around, but the crowded beach makes it difficult to locate his child immediately. Panic begins to set in.
+
+Realizing his child is missing, Ricardo rushes to Joana, the lifeguard. He quickly explains the situation, and Joana, calm and experienced, asks if the child is wearing one of the GPS bracelets. Ricardo confirms, and Joana uses a tablet equipped with a compatible reader. By linking Ricardo’s bracelet to the system, Joana quickly locates the exact position of all family members and identifies Ricardo’s child.
+
+The tablet shows the child is further away, playing with other kids. The tension in Ricardo’s chest eases as Joana accompanies him to where his child is, safe and sound. Relieved, Ricardo thanks her for her help and reflects on how this technology made a huge difference during such a stressful moment.
+
+\subsubsection{\textbf{Scenario 4:} Ricardo Upgrades His Account to Premium}
+Back at his beach bar, Ricardo accesses the application and notices a new button labeled ``Promote Beach Business.'' Curious, he clicks on it and learns that, for a modest monthly fee, he can upgrade his user account to a premium account. This allows him to promote his business by displaying information such as ``Profile Picture,'' ``Business Name,'' ``Business Type,'' ``GPS Location,'' ``Description,'' ``Products,'' and ``Prices.''
+
+Ricardo clicks the ``Get Premium Account'' button and is redirected to the plan selection and payment page. After selecting a plan and payment method, he enters the necessary credentials and completes the payment, obtaining a premium account. He then clicks on the new ``Manage Business'' button and accesses the business management menu. Ricardo updates his profile by editing the relevant fields such as ``Profile Picture,'' ``Business Name,'' ``Business Type,'' and ``Description.'' After submitting the changes, he returns to the business management menu and begins adding his products, prices, and promotions.
+
+\subsubsection{\textbf{End of the Day}}
+As the sun sets, Ricardo and his children return home, tired but happy. Reflecting on the day, he realizes how small technologies, such as the simple QR code at the beach entrance and the GPS bracelets, made a big difference. These innovations not only ensured his children’s safety but also gave him peace of mind that would have been hard to achieve without them. More than just a fun day, it was a day of trust and security.
+
+\subsection{Beachgoer}
+\subsubsection{ \textbf{Biography}}
+Maria is an experienced nurse, 49 years old, born on February 7, 1975, in Braga. She grew up in Vila do Conde with her sister Regina, where they spent summers at the local beach, making Maria a regular beachgoer and nurturing her special affection for the sea.
+
+One day, Maria was swimming at Armação de Pêra beach, which she had never visited before. Suddenly, she realized she was drifting far from the shore, and no matter how hard she tried to swim back, she was being pulled further out to sea. To make matters worse, she began to experience a cramp in her left leg, severely hindering her ability to move. Fortunately, Maria managed to catch the attention of a lifeguard who reached her several meters from the shore. He handed her a rescue buoy, stretched her leg to treat the cramp, and advised her to swim perpendicular to the shoreline to escape the rip current. Exhausted and shaken, Maria made it back to the sand. She hadn’t known about the rip current in that area, which left her feeling apprehensive. She decided not to swim anymore that day and opted instead to take a walk along the water’s edge.
+
+During her walk, Maria ventured beyond the lighthouse, but upon her return, she realized the area was flooded due to the high tide. She had to use a staircase several meters away to access the promenade and return to safety. This experience frustrated her, as she had to walk much further to find an accessible staircase, leaving her very tired.
+
+Maria earned her nursing degree from the Escola Superior de Enfermagem de Coimbra. With 25 years of professional experience, she specialized in critical care nursing and has worked in an Intensive Care Unit, treating numerous cases of patients in post-drowning situations.
+
+Her personal and professional experiences have shaped her attitude toward beach safety. Maria prefers to visit beaches supervised by lifeguards, understanding the potential dangers of the sea. However, she is aware that it’s not always easy to determine whether a beach is supervised or to identify hazardous areas within the same beach.
+
+At 49 years old, Maria reflects on how the beach can be a relaxing activity but also potentially dangerous without adequate rescue resources or supervision.
+\subsubsection{\textbf{Motivation}}
+Maria would like to have a technological solution that provides information about hazardous areas and the safety of the beaches she may visit.
+\subsubsection{\textbf{Mega Scenario: ``A Day at Praia da Rocha''}}
+It was a sunny day at Praia da Rocha, one of the most popular beaches in the Algarve. Maria de Lurdes da Silva Fernandes, a 49-year-old nurse, was about to experience a day at the beach that would change her perspective on beach safety, thanks to innovative technologies.
+
+\subsubsection{\textbf{Scenario 1:} Maria Uses the App to Learn More About the Beach}
+Upon arriving at Praia da Rocha, Maria notices a QR code on a sign at the entrance that reads: “Access our app for more information about this beach.” Curious, she scans the code with her smartphone and is redirected to an app displaying an interactive map of the beach. The map provides relevant information such as submerged rocks, areas with strong currents and rip currents, the locations of lifeguards, and more, all clearly marked.
+
+In the top corner, she sees an icon indicating the current flag status (“green”), confirming that the beach is supervised, along with the UV radiation level.
+
+\subsubsection{\textbf{Scenario 2:} Maria Pairs Her Smartband with the App}
+After setting up her beach umbrella and towel, Maria opens the app to pair her waterproof Smartband. She clicks on the menu icon in the top-left corner (three horizontal lines) and selects the ``Pairing'' option from the dropdown menu. Then, she clicks ``Scan QR Code'' and scans the QR code on her Smartband. Now, she can receive alerts while swimming.
+
+\subsubsection{\textbf{Scenario 3:} Maria Receives Alerts on Her Smartband}
+Eager to enjoy the water, Maria enters the sea. After a few minutes of swimming, her Smartband vibrates, displaying a notification: “Caution: Strong currents 5 meters ahead.” The alert is accompanied by a visual warning on the band’s display. Feeling prepared, Maria changes direction and swims away from the dangerous area.
+
+\subsubsection{\textbf{Scenario 4:} Maria Experiences Difficulties and Receives Help from a Drone}
+Unfortunately, while enjoying the water, Maria experiences a cramp in her leg. She struggles against the waves, trying to return to shore, but the pain is severe. Suddenly, a drone flies overhead. Through its speaker, she hears the calm voice of veteran lifeguard Miguel Soares from the command post: “Stay calm. I’m dropping a buoy. Hold on and stretch your leg to relieve the cramp. Help is on the way.” Following his instructions, Maria takes deep breaths and swims in the suggested direction. Within minutes, she sees Joana Costa, the novice lifeguard, approaching to assist her.
+
+\subsubsection{\textbf{Scenario 5:} Maria Searches for Beach Bars Using the App}
+Feeling hungry, Maria opens the app to search for places to eat on the beach. On the main screen (the beach map), she notices two bars marked on the interactive map. Clicking on one of the locations redirects her to a page displaying the bar's name, menu, and prices.
+
+\subsubsection{\textbf{Scenario 6:} Maria Receives a Notification About a High Tide Area}
+After eating, Maria decides to take a walk along the shore. While enjoying the view, her smartphone vibrates with a notification: “Caution! The area ahead is prone to flooding during high tide. In 50 meters, you will enter an unsupervised area.” Grateful for the warning, she decides to return to a safer area, avoiding any risk.
+
+\subsubsection{\textbf{Scenario 7:} Maria Reports Hazardous Glass on the Sand}
+While walking along the beach, Maria notices broken glass on the sand. She takes out her smartphone, opens the app, and clicks on her current location on the interactive map to access reporting options. Selecting “Report Issue,” she chooses “Hazardous Waste” and then “Glass,” finally clicking “Submit.” A confirmation pop-up appears: “Issue Reported.” Satisfied, Maria continues her walk, taking extra care to avoid stepping on any glass.
+
+\subsubsection{\textbf{Scenario 8:} Maria Assists an Injured Beachgoer and Requests Help}
+Maria sees an elderly man in difficulty on the beach. As a nurse, she examines the wound on his foot and recommends that he seek help from the nearest lifeguard for first aid. However, the man struggles to walk due to the injury. Maria opens the app and presses the “Help Button.” Within minutes, a lifeguard from the area arrives to assist the man.
+
+\subsubsection{\textbf{Scenario 9:} Maria Locates a Berlin Ball Vendor}
+Maria feels like having a snack, so she opens the app to see her options. On the interactive map, she notices a moving icon representing a Berlin Ball vendor, as well as another icon for ice cream. She decides on the Berlin Ball and heads toward the vendor to make a purchase.
+
+\subsubsection{\textbf{End of the Day}}
+Maria returns home and reflects on how technological innovations transformed her beach experience. With Smartbands, drones, and the interactive app, she felt safer and more confident. The sea, which once seemed risky, now feels like a space she can enjoy with others, knowing that safety is just a touch away.
+
+\begin{comment}
+\section{ \textbf{Mega Scenarios}}
+\label{section:scenarios}
+The concept of \textit{Mega Scenarios} is an innovative approach to contextualizing user interactions. These provide the \textit{story} of a certain defined persona over an entire day, overarching scenarios to provide a broader framework. 
+\end{comment}
+
+\section{Functional and Non-Functional Requirements}
+\label{section:requirements}
+This section outlines the system requirements specification developed during the initial phase of prototype development. It includes an overview of the personas and scenarios created, followed by the requirements elicitation, which was based on the analysis of their needs. Additionally, it covers the non-functional requirements, as well as the system assumptions and dependencies.
+\subsection{Functional Requirements}
+Functional requirements define the specific functionalities that the \ac{splash} system must have to meet the project's needs. Based on the personas, scenarios, and use cases identified, the following functional requirements have been defined:
+\begin{enumerate}
+    \item \textbf{Interactive Maps and Real-Time Information: } The system must provide users (lifeguards and beachgoers) with an interactive map in real time, displaying safety information on the beach, the location of dangerous areas, and available resources.
+    \item \textbf{Report and Alert of Hazard Zones:} The system must enable the report hazard zones, such as areas with a risk of weever fish stings, and generate visual alerts visible to all platform users, including lifeguards and beachgoers.
+    \item \textbf{Data History:} The system must be able to store data related to incidents and beach metrics like weather.  
+    \item \textbf{Resource Management: } The system must allow the coordinator (Miguel, in the use case scenario) to dispatch lifeguards to specific locations based on beachgoer requests or real-time hazard detection, ensuring a quick and efficient response.
+    \item \textbf{Real-Time Communication:} The system must enable direct communication between the lifeguard team and coordinators, with the ability to transmit alerts, situation updates, and instructions effectively.
+    \item \textbf{Resource Management and Lifeguard Coordination:} The system must enable efficient management of all resources involved in lifeguard operations, including lifeguards, equipment, and infrastructure, with functionality to monitor and adjust operations in real time.
+    \item \textbf{Alerts for Beachgoers:} The system must generate visual and audible alerts for beachgoers whenever a hazard zone is identified to ensure their safety and prevent accidents.
+    \item \textbf{Access to Beach Information: } The system must provide information on weather conditions, beach amenities, and available services, such as restaurants and surf schools, to enhance the beachgoers experience.
     
+\end{enumerate}
+
+\subsection{Non-Functional Requirements}
+\label{section:non_funt_req}
+Non-functional requirements define the quality attributes that the \ac{splash} system must meet to ensure its proper operation. These requirements are not directly related to specific functionalities, but they are essential for ensuring the system’s effectiveness and reliability.
+\begin{enumerate}
+    \item \textbf{Performance and Scalability:} The system must provide responses with low latency, ensuring real-time interactions with a maximum response time of approximately 3 seconds.
+    \item \textbf{Availability and Usability: } The system must be user-friendly and intuitive, achieving a System Usability Scale (SUS) score of 70\% or higher to ensure ease of use for lifeguards, coordinators, and beachgoers.
+     \item \textbf{Data Security: }The system must guarantee the protection of personal user data, such as contact information and location, complying with security and privacy regulations.
+       \item \textbf{Performance and Scalability: } The system must operate efficiently, even during traffic peaks, such as at high attendance times on the beaches, without affecting the user experience.
+        \item \textbf{Resilience to Adverse Conditions: } The system must be resilient to failures caused by adverse conditions, such as extreme weather (e.g., storms or intense sunlight) that could affect sensors or the communication network.
+         \item \textbf{Maintainability and Upgrades: }The system must allow for easy maintenance and upgrades, enabling the implementation of new features or improvements without disrupting current operations.
+\end{enumerate}
+
+\section{Task Analysis}
+%Derivam dos Cenários das Personas
+\label{section:task_analysis}
+By examining the scenarios derived from the project’s personas, the \ac{hta} decomposes each high-level user goal into a structured tree of sub-goals, tasks and operations. This explicit decomposition reveals where users encounter choice points, where loops of repeated activity occur, and which operations carry the greatest cognitive load or risk of error. Those insights directly inform interface design by identifying opportunities to automate repetitive work, group related controls, provide real-time feedback, and prevent or recover from common mistakes. The complete four-level \ac{hta} diagram appears in Appendix \ref{appendix:hta} (Figure \ref{fig:hta-splash-appendix}), showing every branch of the analysis from top-level goals down to atomic operations.
+
+\newpage

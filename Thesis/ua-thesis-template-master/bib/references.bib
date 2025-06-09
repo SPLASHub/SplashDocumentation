@@ -1,11 +1,132 @@
-@report{3gpp.22.101,
-  author = "3GPP",
-  title = "{Service aspects; Service principles}",
-  type = "TS",
-  institution = "{3rd Generation Partnership Project (3GPP)}",
-  number = "{22.101}",
-  days = 24,
-  month=sep.,
-  year = 2008,
-  url = "http://www.3gpp.org/ftp/Specs/html-info/22101.htm",
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%% Related Projects %%%%%
+@online{infopraia1,
+  title        = {Informação sobre as praias portuguesas},
+  organization = {Info Praia / APA Ambiente},
+  url          = {https://infopraia.apambiente.pt/about/},
+  urldate      = {2024-11-12},
+}
+
+@online{infopraia2,
+  title        = {Info Praia – Informações detalhadas sobre praias},
+  organization = {Sistema Nacional de Informação de Recursos Hídricos},
+  url          = {https://snirh.apambiente.pt/index.php?idMain=1&idItem=2.1},
+  urldate      = {2024-11-12},
+}
+
+@online{praia5g1,
+  title        = {Costa da Caparica: Primeira Praia com Cobertura 5G},
+  author       = {{SAPO Tek}},
+  url          = {https://tek.sapo.pt/noticias/telecomunicacoes/artigos/costa-da-caparica-e-a-primeira-praia-portuguesa-com-cobertura-5g},
+  urldate      = {2024-11-14},
+}
+
+@online{praia5g2,
+  title        = {Primeira Praia 5G – Casos de inovação},
+  author       = {{NOS}},
+  url          = {https://www.nos.pt/5g/5g-em-acao/casos-de-inovacao/primeira-praia-5g},
+  urldate      = {2024-11-14},
+}
+%%%%% Technologies %%%%%
+@online{webble_1,
+  author       = {{MDN Web Docs}},
+  title        = {Web Bluetooth API},
+  year         = {2025},
+  month        = {May},
+  url          = {https://developer.mozilla.org/en-US/docs/Web/API/Web_Bluetooth_API},
+  note         = {Accessed: 2025-04-12}
+}
+
+@online{webble_2,
+  author       = {{Chrome Developers}},
+  title        = {Communicate with Bluetooth devices over JavaScript},
+  year         = {2025},
+  month        = {June},
+  url          = {https://developer.chrome.com/docs/capabilities/bluetooth},
+  note         = {Accessed: 2025-06-02}
+}
+
+@techReport{esp32s3_1,
+  author       = {{Espressif Systems}},
+  institution = {Espressif Systems (Shanghai) Co., Ltd.},
+  title        = {ESP32-S3-WROOM-1 ESP32-S3-WROOM-1U Datasheet},
+  year         = {2023},
+  month        = {November},
+  version      = {1.4},
+   url = {https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf},
+  note         = {Accessed: 2025-02-12}
+}
+
+@techReport{neo6_1,
+  author       = {{u-blox AG}},
+institution = {u-blox AG},
+  title        = {NEO-6: u-blox 6 GPS Modules Data Sheet},
+  year         = {2011},
+  month        = {December},
+  number       = {GPS.G6-HW-09005-E},
+  url          = {https://content.u-blox.com/sites/default/files/products/documents/NEO-6_DataSheet_%28GPS.G6-HW-09005%29.pdf},
+  note         = {Accessed: 2025-02-12}
+}
+@techReport{neo6_2,
+  author       = {{u-blox AG}},
+institution = {u-blox AG},
+  title        = {u-blox 6 Receiver Description: Including Protocol Specification},
+  year         = {2013},
+   url = {https://content.u-blox.com/sites/default/files/products/documents/u-blox6_ReceiverDescrProtSpec_(GPS.G6-SW-10018)_Public.pdf},
+  note         = {Accessed: 2025-02-12}
+}
+@techReport{bt_1,
+   author = {Bluetooth},
+   institution = {Bluetooth},
+   month = {3},
+   title = {The Bluetooth Low Energy Primer (version 1.2.0)},
+   url = {https://www.bluetooth.com/wp-content/uploads/2022/05/the-bluetooth-le-primer-v1.2.0.pdf},
+   year = {2024},
+note         = {Accessed: 2025-02-12}
+}
+@online{espparser_1,
+   author = {Espressif Systems},
+   title = {NMEA Parser Example},
+   note = {GitHub repository (commit 7bf01c9eeaeab2b1414344fb2fb04f6aea111cad)},
+   url = {https://github.com/espressif/esp-idf/tree/master/examples/peripherals/uart/nmea0183_parser}
+}
+@online{espble_1,
+   author = {Espressif Systems},
+   title = {BLE Central PHY Example},
+   note = {GitHub repository (commit 891f86d649382a025b8db1ea810bb6d653ea493f)},
+   url = {https://github.com/espressif/esp-idf/tree/master/examples/bluetooth/nimble/ble_phy/phy_cent#ble-central-phy-example}
+}
+@misc{nimble_1,
+   author = {Apache Mynewt},
+   title = {BLE User Guide (Version 1.13.0)},
+   howpublished = {Online},
+   institution = {Apache Mynewt},
+   url = {https://mynewt.apache.org/latest/network/index.html},
+   year = {2024}
+}
+@misc{nimble_2,
+   author = {Apache Mynewt},
+   title = {NimBLE Security},
+   howpublished = {Online},
+   url = {https://mynewt.apache.org/latest/network/ble_sec.html},
+   year = {2024}
+}
+@online{webbt_1,
+  author       = {{Web Bluetooth Community Group}},
+  title        = {Web Bluetooth: Draft Community Group Report},
+  date         = {2025-05-19},
+  url          = {https://webbluetoothcg.github.io/web-bluetooth/},
+  urldate      = {2025-04-25},
+  note         = {Editors: Reilly Grant, Ovidio Ruiz-Henríquez, et al.},
+}
+%%%%
+@online{lei68,
+  author       = {{Assembleia da República de Portugal}},
+  title        = {Regime jurídico aplicável ao nadador-salvador em todo o território nacional: Lei n.º 68/2014, Artigo 40},
+  howpublished = {Manual Técnico do Nadador-Salvador Coordenador},
+  institution  = {Instituto de Socorros a Náufragos (AMN)},
+  url          = {https://www.amn.pt/ISN/Documents/Manual%20T%C3%A9cnico%20do%20Nadador-Salvador%20Coordenador.pdf},
+  date         = {2014-08-29},
+  urldate      = {2025-06-08},
 }

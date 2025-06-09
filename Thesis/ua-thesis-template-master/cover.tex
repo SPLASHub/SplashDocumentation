@@ -13,6 +13,7 @@
 %% Optional packages for utf8 encoding and T1 fonts
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+\renewcommand\familydefault{\sfdefault}
 
 %% For prettier pages
 \usepackage{lmodern}
@@ -21,6 +22,9 @@
 \usepackage[english,portuguese]{babel}
 
 \usepackage{xspace}% used by \sigla
+\usepackage[backend=biber,style=ieee]{biblatex}
+\usepackage[printonlyused]{acronym}
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -50,26 +54,12 @@
 %%% Edit author's name
 %% Author's full name
 \Author{[Grupo Nº14] \\
-        \vspace{1em}
-        João Pedro \\ 
-        Nunes Vieira \\
-        \vspace{0.5em}
-        António Marques \\ 
-        da Silva Pedrosa \\
-        Moreira \\
-        \vspace{0.5em}
-        David Gabriel \\ 
-        Vieira Ribeiro \\
-        \vspace{0.5em}
-        José Miguel \\ 
-        Guardado Silva \\
-        \vspace{0.5em}
-        Marta Cristina \\ 
-        Ferreira Coutinho \\ 
-        de Almeida \\
-        \vspace{0.5em}
-        Luís Manuel \\
-        Trindade Diogo}
+João Pedro Nunes Vieira \\
+António Marques da Silva Pedrosa Moreira \\
+David Gabriel Vieira Ribeiro \\
+José Miguel Guardado Silva \\
+Marta Cristina Ferreira Coutinho de Almeida \\
+Luís Manuel Trindade Diogo}
 
 %%% Edit thesis title in Portuguese
 %% Thesis Mandatory Title in Portuguese
@@ -104,7 +94,7 @@
 %%% | auxiliar convidado        |
 %%% -----------------------------
 %% Supervisor information
-\Supervisor{Samuel de Sousa Silva}{auxiliar}
+\Supervisor{Doutor Samuel de Sousa Silva}{auxiliar}
 
 %%% OPTIONAL: you can add a second supervisor.
 %%%
@@ -128,7 +118,8 @@
 %%%             for the last enumerated Supervisor; Or
 %%%             nothing {} for all other supervisors 
 %% Optional SecondSupervisor information
-\SupervisorMember{Bernardo José Santos Marques}{auxiliar}{do Departamento de Eletrónica, Telecomunicações e Informática}{da Universidade de Aveiro}{e }
+\SupervisorMember{Bernardo José Santos Marques}{auxiliar}{do Departamento de Eletrónica, Telecomunicações e Informática.}
+
 %\SupervisorMember{Daniel Martins Ferreira}{investigador associado}{do Departamento de Eletrónica, Telecomunicações e Informática}{da Universidade de Aveiro}{e }
 
 %%% Edit your degree information.
@@ -164,21 +155,12 @@
 %%% OPTIONAL: Add an acknowledgement text
 %% Optional Acknowledgement text
 \Acknowledgements{Gostaríamos de expressar o nosso sincero agradecimento aos nossos professores orientadores, cuja orientação e apoio foram fundamentais para a realização deste projeto.
-
-\\
 Agradecemos ao Professor Doutor Samuel de Sousa Silva por ter aceitado o nosso projeto auto-proposto e pelo seu envolvimento contínuo. A sua orientação valiosa, conhecimento e experiência foram uma fonte de inspiração constante.
-\\
-Agradecemos igualmente ao Professor Doutor Bernardo José Santos Marques e ao Professor Daniel Martins Ferreira pela sua disponibilidade, orientação e pelos conselhos úteis que contribuíram para o desenvolvimento deste trabalho.
-\\
+Agradecemos igualmente ao Professor Doutor Bernardo José Santos Marques e ao nosso colega Daniel Martins Ferreira pela sua disponibilidade, orientação e pelos conselhos úteis que contribuíram para o desenvolvimento deste trabalho.
 A todos, muito obrigado por acreditarem em nós e por nos guiarem nesta jornada. A vossa contribuição foi inestimável para o resultado final deste projeto.
-\\
-\vspace{1em}
 We would like to express our sincere gratitude to our supervising professors, whose guidance and support were fundamental for the realization of this project.
-\\
-We thank Professor Doctor Samuel de Sousa Silva for accepting our self-proposed project and for his continuous involvement. His valuable guidance, knowledge, and experience were a constant source of inspiration.
-\\
-We also thank Professor Doctor Bernardo José Santos Marques and Professor Daniel Martins Ferreira for their availability, guidance, and useful advice that contributed to the development of this work.
-\\
+We thank Professor Samuel de Sousa Silva for accepting our self-proposed project and for his continuous involvement. His valuable guidance, knowledge, and experience were a constant source of inspiration.
+We also thank Professor Bernardo José Santos Marques and our colleague Daniel Martins Ferreira for their availability, guidance, and useful advice that contributed to the development of this work.
 To all, thank you very much for believing in us and guiding us on this journey. Your contribution was invaluable to the final outcome of this project.
 }
 %%% Edit the keywords and abstract in Portuguese
@@ -186,13 +168,20 @@ To all, thank you very much for believing in us and guiding us on this journey. 
 %%%  declaration.
 %%% Don't remove the \selectlanguage statement or you will end with incorrect hyphenation
 %% Mandatory Keywords and Abstract in Portuguese
-\Abstract{palavras-chave}{Segurança, Praia, Nadador-Salvador, Prevenção, Tecnologia.}
-         {resumo}{\selectlanguage{portuguese}O projeto Strategic Prevention and Lifeguard Alert Safety Hub (SPLASH) é uma prova de conceito destinada a melhorar a segurança e a gestão das praias portuguesas, que desempenham um papel central no turismo e na economia do país.
-         \\
-         Com milhares de turistas visitando anualmente, o foco principal da iniciativa SPLASH é garantir que os nadadores-salvadores possam desempenhar suas funções de forma eficaz. O aumento do volume de turistas apresenta desafios significativos, tornando a sua segurança e vigilância uma prioridade máxima. Assim, é crucial não apenas para manter a reputação do país, mas, mais importante ainda, para garantir o bem-estar dos banhistas e a eficácia dos nadadores-salvadores enquanto cumprem suas funções críticas. O projeto é desenhado para abordar estes desafios complexos, melhorando as capacidades, comunicação, estratégias e gestão dos nadadores-salvadores.
-         \\
-         O SPLASH representa uma contribuição significativa para a modernização da gestão costeira, promovendo a proteção de vidas humanas através da prevenção e reforçando o status de Portugal como um padrão internacional de segurança nas praias.}
-
+\Abstract
+  {palavras-chave}{Segurança, Praia, Nadador-Salvador, Prevenção, Tecnologia.}
+  {resumo}{
+    \selectlanguage{portuguese}
+    O projeto \textit{Strategic Prevention and Lifeguard Alert Safety Hub} (SPLASH) é uma prova de conceito destinada a melhorar a segurança e a gestão das praias portuguesas.A iniciativa centra-se em três eixos fundamentais: a gestão integrada das equipas e incidentes, o suporte direto ao trabalho dos nadadores-salvadores e a proteção dos banhistas.
+    Com milhares de turistas a visitar as praias todos os anos, garantir que os nadadores-salvadores consigam desempenhar as suas funções de forma eficaz é essencial. O aumento do volume de visitantes traz novos desafios à vigilância e à prevenção de acidentes, tornando prioritária a adoção de soluções tecnológicas inovadoras que promovam a segurança e a reputação do país como destino turístico seguro.
+    \\
+    \\
+    O objetivo principal do SPLASH é o desenvolvimento de uma web app que apoie diretamente os nadadores-salvadores, disponibilizando um mapa interativo das praias, registo de ocorrências e ferramentas para a gestão eficiente das equipas. A solução visa melhorar a comunicação, a coordenação e a tomada de decisão por parte dos responsáveis pela segurança balnear.
+    \\
+    \\
+    A prova de conceito revelou-se promissora do ponto de vista da sua viabilidade técnica e operacional, apresentando bons resultados nos testes realizados. Estes dados reforçam o potencial da solução proposta para apoiar a gestão costeira e a segurança nas praias portuguesas.
+  }
+        
 %%% OPTIONAL: you can write the keywords and
 %%%  abstract in other languages. You can repeat
 %%%  the following lines as many times as you want
@@ -200,12 +189,18 @@ To all, thank you very much for believing in us and guiding us on this journey. 
 %%% Don't remove the \selectlanguage statement or you will end with incorrect hyphenation.
 %%% You can modify the language to any other supported by Latex
 %% Optional Keywords and Abstract in additional languages.
-\Abstract{keywords}{Safety, Beach, Lifeguards, Prevention, Technology.}
-         {abstract}{\selectlanguage{english}The Strategic Prevention and Lifeguard Alert Safety Hub (SPLASH) project is a proof of concept designed to enhance the safety and management of Portuguese beaches, which play a central role in the country’s tourism and economy. 
-         \\
-         With thousands of tourists visiting each year, the primary focus of the SPLASH initiative is to ensure lifeguards can perform their duties effectively. The increased volume of tourists presents significant challenges for lifeguards, making their safety and vigilance a top priority. This is crucial not only for maintaining the country's reputation but, more importantly, for ensuring the well-being of beachgoers and the effectiveness of the lifeguards as they carry out their critical duties. The project is designed to address these complex and growing challenges by enhancing lifeguard capabilities, improving their communication, and optimizing their management strategies. 
-         \\
-         SPLASH represents a significant contribution to the modernization of coastal management, promoting the protection of human lives through prevention while also strengthening Portugal’s status as an international benchmark for beach safety.}
+\Abstract
+  {keywords}{Safety, Beach, Lifeguard, Prevention, Technology.}
+  {abstract}{
+    The \textit{Strategic Prevention and Lifeguard Alert Safety Hub} (SPLASH) project is a proof of concept designed to improve the safety and management of Portuguese beaches. The initiative focuses on three main pillars: integrated management of teams and incidents, direct support for lifeguards’ daily tasks, and protection of beach-goers.
+    With thousands of tourists visiting the beaches each year, ensuring that lifeguards can perform their duties effectively is crucial. The growing number of visitors brings new challenges to surveillance and accident prevention, making it essential to adopt innovative technological solutions that enhance safety and support the country’s reputation as a secure tourist destination.
+    \\
+    \\
+    SPLASH’s main goal is the development of a web application that directly supports lifeguards by providing an interactive beach map, incident reporting features, and tools for efficient team management. The solution aims to improve communication, coordination, and decision-making among coastal safety authorities.
+    \\
+    \\
+    The proof of concept has shown promising results in terms of technical and operational feasibility, with positive outcomes from the tests conducted. These findings highlight the potential of the proposed solution to support coastal management and enhance safety on Portuguese beaches.
+  }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%       DEFINE THESIS COVER FIELDS
@@ -222,6 +217,6 @@ To all, thank you very much for believing in us and guiding us on this journey. 
 %%% Set the proper language or you will end with incorrect hyphenation!
 \selectlanguage{english}
 
-
 \MakeCover
+
 \end{document}

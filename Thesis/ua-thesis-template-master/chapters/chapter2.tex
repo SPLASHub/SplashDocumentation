@@ -1,112 +1,156 @@
-\chapter{State of the Art and Market Analysis}
-\label{chapter:sota}
 
-This chapter merges the current state of technology in beach safety with a comprehensive market analysis, focusing on the SPLASH project and its potential impact.
+\chapter{Team Coordination and Project Management}
+\label{chapter:teamplan}
 
-\section{Related Projects Implemented in Portugal}
-\subsection{MEO Beachcam}
-MEO Beachcam is a digital platform that provides real-time information about the beaches of mainland Portugal.
-\\
-\indent The platform provides around the clock video transmission of the beaches through a network of cameras. In addition to the live video feeds, MEO Beachcam provides extensive meteorological data, including: weather conditions, temperature, wind strength and direction, sea state and UV index. Besides being accessible on the platform, the aforementioned data is also available to security forces and rescue services for monitoring and emergency response. In addition to the oceanographic buoys and weather stations for data collection, the platform also employs the use of Artificial Intelligence for analyzing wave patterns and better predict weather conditions. 
-\\
-\indent The project is committed to expand and enhance its coastal monitoring infrastructure. Future plans for development include the expansion of the existing camera network and the deployment of drone technology to capture aerial imagery, all of this while seeking to increase the number of monitored beaches throughout mainland Portugal.
+Effective communication is the cornerstone of successful software development, especially in multidisciplinary teams. A structured \textbf{Team Communication Plan} ensures that all members remain aligned, informed, and coordinated toward shared objectives.
 
-\subsection{Info Praia}
-Info Praia is a mobile app developed by the \ac{apa}  with the purpose of provide actualized information during the bathing season on many of the beaches of Portugal.
-\\
-\indent It provides information on the beach occupation, and occupation prediction based on data of registered homologues days. The data used for the daily weather forecast is provided by the Instituto Portugues do Mar e da Atmosfera, I.P (IPMA, I.P). The data about the tides  is provided by the Instituto Hidrográfico. The water quality is monitored by the APA at least four times for each bathing season to verify the bathing suitability and display its suitability in the app. Furthermore, is displayed by the app real-time video transmitted by the MEO Beachcam platform analyzed previously.
-\subsection{Praia 5G}
-Praia 5G is a joint initiative between NOS and Almada city council to launch the first 5G beach in Portugal. This project has the objective of demonstrating how the 5G network technology, artificial intelligence and video analysis can transform the security and management of beaches.
-\\
-\indent The beach was equipped with a 5G network to support all the functionalities implemented. One of the functionalities is the automated monitorization of persons, objects and vessels. This functionality includes the detection of risk situations, automated alerts for the responsible entities and it uses artificial vision cameras in vigilance towers that process in real time the images through machine learning algorithms allowing immediate response in emergency situations. Another functionality is the monitorization and management of the beach occupation which includes automatic counting the number of visitors and their respective entry and exit times and the capacity to estimate the concentration of people per area of the beach. Lastly, the management of residues is elaborated by the readings of sensors that measure the garbage bins capacity.
-\\
-\indent This project has the future perspective of implementing functionalities such as drowning detection, children and lost objects localization through artificial intelligence. Also, it is intended to use drones for real time data of weather conditions and to increase the sustainability expand the system to detect garbage in the sea with the possibility of the use of cleaning robots.
+This chapter presents the communication strategies and project management practices adopted throughout SPLASH's development. These include the selection of collaboration tools, scheduling methodologies, team structure, and risk mitigation strategies. Together, they form a robust framework to support the project's lifecycle—from initial planning to final deployment.
 
-\iffalse
-\section{Others Related Projects Implemented Internationally}
-\section{Technologies Of Interest}
-\section{Conclusion Of The State Of The Art}
-\fi
-
-\section{Market Analysis and Business Evaluation}
-This comprehensive analysis highlights the market potential for SPLASH in improving beach safety while addressing existing gaps in current solutions.
-
-\subsection{Market Overview}
-\begin{enumerate}
-    \item \textbf{Demand for Beach Safety Solutions:} The rise in tourism necessitates effective safety measures to protect beachgoers, driving demand for innovative solutions.
-    \item \textbf{Unique Value Proposition:} SPLASH aims to unify various applications and stakeholder needs into a single platform, enhancing beach safety management.
-    \item \textbf{Global Expansion Potential:} Initially targeting Portuguese beaches, SPLASH's scalability allows for future international market entry.
-    \item \textbf{Monetization Strategies:} The business model includes premium accounts for local businesses and a licensing model for lifeguard organizations, ensuring sustainable revenue streams.
-\end{enumerate}
-
-\subsection{Competitors Analysis}
-The competitive landscape includes established services and emerging technologies.
-
-\subsubsection{Current Technologies}
-\begin{itemize}
-    \item \ac{apa}: Conducts water quality assessments and operates the \textit{Beachcam} web app for live feeds of Portuguese beaches.
-    \item \ac{amn}: Runs lifesaving stations and projects like \textit{Project Seawatch} focused on surveillance in unmonitored areas.
-    \item Info Praia App: Provides updates on water quality but lacks availability on major platforms.
-\end{itemize}
-
-\subsubsection{Emerging Technologies}
-\begin{itemize}
-    \item AI-Based Riptide Detection Tools
-    \item Smart Beach Initiatives
-    \item Drone Surveillance Systems
-\end{itemize}
-
-SPLASH distinguishes itself by integrating these technologies into a cohesive platform focused on proactive rather than reactive safety measures.
-
-\section{Business Model Evaluation}
-SPLASH employs a multi-faceted business model addressing the needs of both beachgoers and lifeguard organizations:
+\section{Communication Tools and Platforms}
+\label{section:comunication_tools}
 
 \begin{itemize}
-    \item \textbf{Free Web Application for Users:} This approach encourages widespread adoption while collecting valuable user data.
-    \item \textbf{Premium Listings for Businesses:} Local businesses can enhance visibility within the app, benefiting from increased traffic while supporting SPLASH financially.
-    \item \textbf{Licensing for Lifeguards:} Affordable licensing options will be offered to lifeguard organizations once established, providing access to advanced features tailored to their needs.
+    \item \textbf{GitHub:} Used for version control and collaborative development. It serves as the central repository for source code, issue tracking, and code review.
+    \item \textbf{OneDrive \& Overleaf:} Used for collaborative documentation. These tools allow for real-time editing and maintain a consistent version history of all written deliverables.
+    \item \textbf{Jira:} Employed for agile project management, sprint planning, and milestone tracking. Provides an overview of tasks and responsibilities.
+    \item \textbf{Discord:} Chosen for synchronous communication, including voice calls, video meetings, and chat. Enables both scheduled and informal interactions.
 \end{itemize}
 
-This model fosters user engagement and creates diverse revenue streams that support long-term growth.
+\newpage
 
-\section{Marketing Strategy Assessment}
-To penetrate the market effectively, SPLASH can implement a robust marketing strategy:
+\section{Schedule and Meetings}
+\label{section:schedule_meetings}
+
+\textbf{Excel} was used to coordinate individual availabilities and to schedule regular team meetings and supervisor check-ins. This tool enabled effective time management and ensured team-wide alignment, as illustrated in Figure~\ref{fig:schedule}.
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=16cm]{figs/team_schedule_1.png}
+      \caption{Team schedule and meeting planner implemented in Excel, showing member availability, scheduled meetings, and project milestones for the first semester}
+      \label{fig:schedule1}
+\end{figure}
+
+\begin{figure}[H]
+      \centering
+      \includegraphics[width=16cm]{figs/team_schedule_2.png}
+      \caption{Team schedule and meeting planner implemented in Excel, showing member availability, scheduled meetings, and project milestones for the second semester}
+      \label{fig:schedule2}
+\end{figure}
+
+\section{Team Structure and Roles}
+\label{section:team_structure}
+
+Effective project execution relies heavily on a well-defined team structure with clear responsibilities. This section outlines the adopted framework, designed to optimize workflow and ensure comprehensive coverage of project needs.
+
+\newpage
+
+\subsection{SCRUM Master}
+\label{subsec:scrum_master}
+
+João Vieira was designated as the \textit{SCRUM Master}, responsible for:
 
 \begin{itemize}
-    \item \textbf{Partnerships with Authorities:} Collaborating with local governments and tourism boards will promote SPLASH as an essential tool for beach safety, and give SPLASH the needed credibility in the eyes of the general public.
-    \item \textbf{Social Media Engagement:} Creating content that emphasizes beach safety and showcases SPLASH's unique features will build brand awareness.
-    \item \textbf{Industry Participation:} Attending conferences focused on coastal management will facilitate networking opportunities and demonstrate SPLASH's capabilities.
+    \item Facilitating the SCRUM process
+    \item Ensuring adherence to SCRUM principles
+    \item Removing obstacles to team progress
+    \item Fostering a culture of continuous improvement
 \end{itemize}
 
-\texttt{\textit{\textbf{Note:} Key Performance Indicators (KPIs) will be utilized to measure user adoption rates, engagement metrics, and feedback.}}
+\subsection{Sub-teams}
+\label{subsec:sub_teams}
 
-\section{SWOT Analysis}
-The following SWOT analysis provides insight into SPLASH's strategic position:
+To leverage team strengths, members were grouped into three specialized sub-teams:
+
+\subsubsection{Frontend Development Team}
+\begin{itemize}
+    \item \textbf{Team Leader:} José Silva 
+    \item \textbf{Members:} José Silva \& Antonio Moreira
+    \item \textbf{Responsibilities:}
+    \begin{itemize}
+        \item UI design and implementation
+        \item Responsive layout creation
+        \item UX optimization
+        \item Integration with backend APIs
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Backend Development Team}
+\begin{itemize}
+    \item \textbf{Team Leader:} João Vieira 
+    \item \textbf{Members:} João Vieira
+    \item \textbf{Responsibilities:}
+    \begin{itemize}
+        \item Server-side logic and database design
+        \item API development
+        \item Performance optimization
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Data Team}
+\begin{itemize}
+    \item \textbf{Team Leader:}  Marta Almeida
+    \item \textbf{Members:}  Marta Almeida \& David  Ribeiro
+    \item \textbf{Responsibilities:}
+    \begin{itemize}
+        \item Validation and processing of quiz results submitted by lifeguards
+        \item Planning, execution, and storage of user testing data
+        \item Providing technical support to other teams regarding data-related matters
+    \end{itemize}
+\end{itemize}
+\subsubsection{Hardware Development Team}
+\begin{itemize}
+    \item \textbf{Team Leader:}  Luis Diogo
+    \item \textbf{Members:}  Luis Diogo
+    \item \textbf{Responsibilities:}
+    \begin{itemize}
+        \item Develop embedded firmware
+        \item Integrating devices with the SPLASH ecosystem 
+    \end{itemize}
+\end{itemize}
+
+
+\section{Risk Analysis and Mitigation Strategies}
+\label{section:risk_analisys_mitigation_strategies}
+
+The implementation of SPLASH involves technological, environmental, and human-related risks. These must be addressed to ensure system reliability and user safety.
 
 \begin{itemize}
-    \item \textbf{Strengths:}
-        \begin{itemize}
-            \item Innovative technology integration.
-            \item Comprehensive approach to beach safety.
-            \item Potential positive impact on public health.
-        \end{itemize}
+    \item \textbf{Hardware and Connectivity Failures:} Devices such as GPS wristbands or communication tablets may malfunction or lose connectivity. This can be mitigated through pre-deployment testing, scheduled maintenance, and having redundant devices available.
 
-    \item \textbf{Weaknesses:}
-        \begin{itemize}
-            \item Initial reliance on user adoption; user-centered development will mitigate resistance by tailoring solutions to user needs.
-        \end{itemize}
+    \item \textbf{Environmental Conditions:} Weather-related events (e.g., high winds, salt exposure) may affect equipment performance. Selecting durable, weather-resistant hardware and establishing operational contingency protocols can reduce these risks.
 
-    \item \textbf{Opportunities:}
-        \begin{itemize}
-            \item Expanding global tourism market.
-            \item Increasing focus on preventive safety measures.
-            \item Potential partnerships with stakeholders.
-        \end{itemize}
-
-    \item \textbf{Threats:}
-        \begin{itemize}
-            \item Regulatory challenges across jurisdictions.
-            \item Competition from established technologies.
-            \item Economic fluctuations impacting tourism spending.
-        \end{itemize}    
+    \item \textbf{Human Error and Technological Adoption:} Some users may struggle with adapting to new tools. This risk is mitigated by ensuring the interface remains user-friendly and providing training sessions to lifeguards and supervisors.
 \end{itemize}
+
+\section{Conclusion}
+In summary, the project's success depended not only on technical development but also on structured communication and clearly defined responsibilities. The use of collaborative tools, agile methodologies, and proactive risk management contributed significantly to the team's cohesion and overall project quality.
+
+
+
+
+
+%%
+%\begin{thebibliography}{9}
+
+%\bibitem{infopraia1} 
+%Info Praia.
+%\textit{Informação sobre as praias portuguesas.}
+%Disponível em: \url{https://infopraia.apambiente.pt/about/}, %acedido em 12/11/2024.
+
+%\bibitem{infopraia2} 
+%Sistema Nacional de Informação de Recursos Hídricos.
+%\textit{Info Praia - Informações detalhadas sobre praias.}
+%Disponível em: \url{https://snirh.apambiente.pt/index.php?%idMain=1&idItem=2.1}, acedido em 12/11/2024.
+
+%\bibitem{praia5g1} 
+%Costa da Caparica: Primeira Praia com Cobertura 5G.
+%\textit{SAPO Tek - Notícias sobre telecomunicações.}
+%Disponível em: \url{https://tek.sapo.pt/noticias/telecomunicacoes/%artigos/costa-da-caparica-e-a-primeira-praia-portuguesa-com-%cobertura-5g}, acedido em 14/11/2024.
+
+%\bibitem{praia5g2} 
+%NOS.
+%\textit{Primeira Praia 5G - Casos de inovação.}
+%Disponível em: \url{https://www.nos.pt/5g/5g-em-acao/casos-de-%inovacao/primeira-praia-5g}, acedido em 14/11/2024.
+
+%\end{thebibliography}
+%\end{document}
